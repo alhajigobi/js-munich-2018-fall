@@ -1,42 +1,67 @@
 <html>
-	<head>
-		<title>ReDI.js 1</title>
-		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">
-		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
-		<style>
-			.reveal pre {
-				margin: 0;
-			}
-			.monospace {
-				font-family: monospace !important;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Intro to JavaScript</h1>
-					<h3>ReDI.js</h3>
-				</section>
 
+<head>
+	<title>ReDI.js 1</title>
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+	<link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+	<style>
+		.reveal pre {
+			margin: 0;
+		}
+
+		.monospace {
+			font-family: monospace !important;
+		}
+
+		.illustration {
+			border: 0px
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Intro to JavaScript</h1>
+				<h3>ReDI.js</h3>
+			</section>
+			<section>
+				<p>Welcome!</p>
+			</section>
+			<section>
+				<p>Why JavaScript?</p>
+				<img src="assets/so-dev-survey-header.png" class="illustration">
+				<a href="https://insights.stackoverflow.com/survey/2018/#technology">Source</a>
+			</section>
+			<section>
 				<section>
-					<p>Welcome!</p>
+					<img src="assets/so-pop-lang.png" class="illustration" />
 				</section>
-			</div>
+			</section>
+			<section>
+				<p>What's after JavaScript</p>
+				<img src="assets/fe-learning-path.png" class="illustration" style="height:70%">
+				<br>
+				<a href="https://codeburst.io/the-2018-web-developer-roadmap-826b1b806e8d">Source</a>
+			</section>
 		</div>
+	</div>
 
 
-		<script src="../../reveal.js/lib/js/head.min.js"></script>
-		<script src="../../reveal.js/js/reveal.js"></script>
-		<script>
-			Reveal.initialize({
-				history: true,
-				dependencies: [
-					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
-				],
-			});
-		</script>
-	</body>
+	<script src="../../reveal.js/lib/js/head.min.js"></script>
+	<script src="../../reveal.js/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			history: true,
+			dependencies: [
+				{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+				// Interpret Markdown in <section> elements
+			]
+		});
+	</script>
+</body>
 </html>

@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>ReDI.js 1</title>
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">
+		<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+		<style>
+			.reveal pre {
+				margin: 0;
+			}
+			.monospace {
+				font-family: monospace !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Intro to JavaScript</h1>
+					<h3>ReDI.js</h3>
+				</section>
+
+				<section>
+					<p>Welcome!</p>
+				</section>
+			</div>
+		</div>
+
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: '../../reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+				],
+			});
+		</script>
+	</body>
+</html>

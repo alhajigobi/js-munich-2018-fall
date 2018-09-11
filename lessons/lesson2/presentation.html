@@ -91,10 +91,10 @@ alert("What's up " + name);</code></pre>
 				<h3>🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊</h3>
 			</section>
 			<section>
-				<h3>Bouns Round: HTML & CSS</h3>
+				<h3>Bonus Round: HTML & CSS</h3>
 				<ul>
 					<li class="fragment">Name 3 types of CSS selectors</li>
-					<li class="fragment">Ans: class, ID, type</li>
+					<li class="fragment">class, ID, type</li>
 					<li class="fragment">Fill in the ... part
 						<pre><code>&lt;link ...="stylesheet" ...="text/css" ...="theme.css"&gt;</code></pre>
 					</li>
@@ -119,7 +119,7 @@ alert("What's up " + name);</code></pre>
 						<pre><code>alert("Hello world!");</code></pre>
 					</li>
 					<li class="fragment">This is called a statement. Many many statements in a Javascript file.</li>
-					<li class="fragment">Usually tell it is a statement by the ";"</li>
+					<li class="fragment">Usually we can tell it is a statement by the ";"</li>
 				</ul>
 			</section>
 			<section>
@@ -130,14 +130,14 @@ alert("What's up " + name);</code></pre>
 				<ul>
 					<li class="fragment">The weird JS jargon "alert" is a special kind of what?</li>
 					<li class="fragment">It is a <span class="emphasis">function</span></li>
-					<li class="fragment">You will use funtion ALL THE TIME</li>
+					<li class="fragment">You will use functions ALL THE TIME</li>
 					<li class="fragment">A reusable chunk of code that does <i>something</i></li>
 				</ul>
 			</section>
 			<section>
-				<h2>Who and what define a function?</h2>
+				<h2>Who and what defines a function?</h2>
 				<ul>
-					<li class="fragment">Javascaript framework itself 💻</li>
+					<li class="fragment">Javascript framework itself 💻</li>
 					<li class="fragment">You 👩🏻 👨🏻</li>
 					<li class="fragment">3rd party libraries you are using 📚</li>
 				</ul>
@@ -167,7 +167,7 @@ alert("What's up " + name);</code></pre>
 				<h3>Naming varibles</h3>
 				<pre><code>let myText = "hello, world!";</code></pre>
 				<ul>
-					<li class="fragment">Size:</li>
+					<li class="fragment">length:</li>
 					<li class="fragment">1 to few thousands</li>
 					<li class="fragment">Restriction:</li>
 					<li class="fragment">Can start with "_" or "$" but no number</li>
@@ -212,6 +212,16 @@ alert("What's up " + name);</code></pre>
 					</code></pre>
 			</section>
 			<section>
+					<h4>What does this do?</h4>
+					<pre><code>
+	let myText;
+	let yourText = "Mr. Pickleworth";
+	myText = yourText;
+	yourText = "Mrs. Treetrunk";
+	alert("You look nice today, " + myText);
+						</code></pre>
+				</section>
+			<section>
 				<h1>Functions</h1>
 			</section>
 			<section>
@@ -222,7 +232,7 @@ alert("What's up " + name);</code></pre>
 				</ul>
 			</section>
 			<section>
-				<p>Let say I want to find the distance a space ship travel</p>
+				<p>Let say I want to find the distance a space ship travels</p>
 				<h1>------------&gt; 🚀</h1>
 				<ul>
 					<li class="fragment"><span class="emphasis">distance</span>= speed * time</li>
@@ -267,12 +277,12 @@ alert("What's up " + name);</code></pre>
 				<h2>Solve it by Function!</h2>
 				<pre class="fragment"><code>
 	function showDistance(speed, time){
-		alert(speed * time)
+		alert(speed * time);
 	}
-	showDistance(56,7)
-	showDistance(12,3)
-	showDistance(9,88)
-	showDistance(64,90)
+	showDistance(56,7);
+	showDistance(12,3);
+	showDistance(9,88);
+	showDistance(64,90);
 					</code></pre>
 			</section>
 			<section>
@@ -286,21 +296,21 @@ alert("What's up " + name);</code></pre>
 				<p>Dive in: Create a simple function to say hello with alert</p>
 				<pre class="fragment"><code>
 function sayHello() {
-	alert("hello!")
+	alert("hello!");
 }
-sayHello()
+sayHello();
 				</code></pre>
 			</section>
 			<section>
 				<p class="fragment">What is an argument?</p>
 				<p class="fragment">Remeber alert("Hello!") ?</p>
-				<p class="fragment">Anotehr example: showDistant(speed,time) ?</p>
+				<p class="fragment">Another example: showDistance(speed,time) ?</p>
 				<p class="fragment"><span class="emphasis">arguments</span> are between the () seperated by ","</p>
 				<pre class="fragment"><code>
 	function showDistance(speed, time){
-		alert(speed * time)
+		alert(speed * time);
 	}
-	showDistance(56,7)
+	showDistance(56,7);
 					</code></pre>
 			</section>
 			<section>
@@ -308,9 +318,32 @@ sayHello()
 				<img src="assets/function-call.png">
 			</section>
 			<section>
-					<p class="fragment">Function arguments are treated as variable</p>
-					<img src="assets/function-arguments.png">
-				</section>
+				<p class="fragment">Function arguments are treated as variable</p>
+				<img src="assets/function-arguments.png">
+			</section>
+			<section>
+				<p class="fragment">Dive in: Code a function named <span class="emphasis">askName </span>that prompts the user to <span class="emphasis">"Enter
+						name"</span> and assigns the answer to <span class="emphasis">userName</span>, which hasn't been declared beforehand. Then use alert to show the name. Don't
+					forget to make the function call.</p>
+				<pre class="fragment"><code>
+	function askName() {
+		let userName = prompt("Enter name");
+		alert(userName);
+	}
+	askName();
+					</code><pre>
+			</section>
+			<section>
+				<p class="fragment">Dive in: Code a function named <span class="emphasis">addStrings </span>takes 2 arguments. Combine
+					the 2 strings and store it. Then show the the stored varible in an alert box. Don't forget to make the function call.</p>
+					<pre class="fragment"><code>
+	function addStrings(string1, string2) {
+		let combine = string1 + string2;
+		alert(combine);
+	}
+	addStrings("One", "Apple");
+					</code><pre>
+			</section>
 		</div>
 	</div>
 

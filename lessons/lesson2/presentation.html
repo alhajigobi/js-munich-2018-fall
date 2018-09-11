@@ -35,6 +35,11 @@
 		.reveal li pre {
 			width: fit-content;
 		}
+
+		.emphasis {
+			color: orange;
+			font-weight: bold;
+		}
 	</style>
 </head>
 
@@ -43,7 +48,7 @@
 		<div class="slides">
 			<section>
 				<h1>Intro to JavaScript</h1>
-				<h3>Lesson 2: Varibles and more</h3>
+				<h3>Lesson 2</h3>
 			</section>
 			<section>
 				<h1>Quiz!</h1>
@@ -103,6 +108,209 @@ alert("What's up " + name);</code></pre>
 &lt;/head&gt;</code></pre>
 					</li>
 			</section>
+			<section>
+				<h1>Lesson 2: Variables and Functions</h1>
+			</section>
+			<section>
+				<h3>A few words on:</h3>
+				<ul>
+
+					<li class="fragment">
+						<pre><code>alert("Hello world!");</code></pre>
+					</li>
+					<li class="fragment">This is called a statement. Many many statements in a Javascript file.</li>
+					<li class="fragment">Usually tell it is a statement by the ";"</li>
+				</ul>
+			</section>
+			<section>
+				<pre><code>alert("Hello world!");</code></pre>
+				<br>
+				<br>
+				<br>
+				<ul>
+					<li class="fragment">The weird JS jargon "alert" is a special kind of what?</li>
+					<li class="fragment">It is a <span class="emphasis">function</span></li>
+					<li class="fragment">You will use funtion ALL THE TIME</li>
+					<li class="fragment">A reusable chunk of code that does <i>something</i></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Who and what define a function?</h2>
+				<ul>
+					<li class="fragment">Javascaript framework itself 💻</li>
+					<li class="fragment">You 👩🏻 👨🏻</li>
+					<li class="fragment">3rd party libraries you are using 📚</li>
+				</ul>
+			</section>
+			<section>
+				<pre><code>alert("Hello world!");</code></pre>
+				<ul>
+					<li class="fragment">What do you call the text inside the quotation marks ""?</li>
+					<li class="fragment">It is a <span class="emphasis">string</span></li>
+					<li class="fragment">Always wrap a <span class="emphasis">string</span> in single or double quotes</li>
+				</ul>
+			</section>
+			<section>
+				<pre><code>let myText = "hello, world!";</code></pre>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<ul>
+					<li class="fragment">Remeber varibles? 📦</li>
+					<li class="fragment">How do we name a varible? There are a few rules.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Naming varibles</h3>
+				<pre><code>let myText = "hello, world!";</code></pre>
+				<ul>
+					<li class="fragment">Size:</li>
+					<li class="fragment">1 to few thousands</li>
+					<li class="fragment">Restriction:</li>
+					<li class="fragment">Can start with "_" or "$" but no number</li>
+					<li class="fragment">What else?:</li>
+					<li class="fragment">That's it! Other than the first character, any combination of lower case or upper case letters,
+						number, "_" or "$"</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Varible name examples:</h3>
+				<pre><code>let myText;</code></pre>
+				<pre><code>let $;</code></pre>
+				<pre><code>let r8;</code></pre>
+				<pre><code>let _counter;</code></pre>
+				<pre><code>let thisIsALongVariableName_butItCanBeLonger;</code></pre>
+				<pre><code>let __$abc;</code></pre>
+				<pre><code>let oldSchoolName;</code></pre>
+			</section>
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code>
+	let myText;
+	let yourText;
+	myText = "hello world";
+	myText = 4 * 45;
+	myText = true;
+	myText = undefined;
+	alert(myText);
+				</code></pre>
+			</section>
+			<section>
+				<h4>What does this do?</h4>
+				<pre><code>
+	let myText;
+	let yourText = "Mr. Pickleworth";
+	myText = 3.45 + 40 * 7;
+	myText = "Hi there, " ;
+	alert(myText + yourText);
+	myText = "Nice of you to show up, ";
+	yourText = "fool!";
+	alert(myText + "my friend.");
+					</code></pre>
+			</section>
+			<section>
+				<h1>Functions</h1>
+			</section>
+			<section>
+				<p>So it is nothing wrong with</p>
+				<pre><code>alert("Hello world!");</code></pre>
+				<ul>
+					<li class="fragment">BUT you will never have 1 line js :D</li>
+				</ul>
+			</section>
+			<section>
+				<p>Let say I want to find the distance a space ship travel</p>
+				<h1>------------&gt; 🚀</h1>
+				<ul>
+					<li class="fragment"><span class="emphasis">distance</span>= speed * time</li>
+					<li class="fragment">In Javascript:</li>
+					<li class="fragment">
+						<pre><code>
+	let speed = 10;
+	let time = 5;
+	alert(speed * time);
+						</code></pre>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<p>And if I have more values?</p>
+				<pre class="fragment"><code>
+	let speed1 = 56;
+	let time1 = 7;
+	alert(speed1 * time1);
+
+	let speed2 = 12;
+	let time2 = 3;
+	alert(speed2 * time2);
+
+	let speed3 = 9;
+	let time3 = 88;
+	alert(speed3 * time3);
+
+	let speed4 = 64;
+	let time4 = 90;
+	alert(speed4 * time4);
+
+						</code></pre>
+				</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Awful! 😫</h2>
+				<p>So much repeated code!</p>
+			</section>
+			<section>
+				<h2>Solve it by Function!</h2>
+				<pre class="fragment"><code>
+	function showDistance(speed, time){
+		alert(speed * time)
+	}
+	showDistance(56,7)
+	showDistance(12,3)
+	showDistance(9,88)
+	showDistance(64,90)
+					</code></pre>
+			</section>
+			<section>
+				<p>Defintion of a function</p>
+				<ul>
+					<li class="fragment">Group statements together</li>
+					<li class="fragment">Make your code reuseable</li>
+				</ul>
+			</section>
+			<section>
+				<p>Dive in: Create a simple function to say hello with alert</p>
+				<pre class="fragment"><code>
+function sayHello() {
+	alert("hello!")
+}
+sayHello()
+				</code></pre>
+			</section>
+			<section>
+				<p class="fragment">What is an argument?</p>
+				<p class="fragment">Remeber alert("Hello!") ?</p>
+				<p class="fragment">Anotehr example: showDistant(speed,time) ?</p>
+				<p class="fragment"><span class="emphasis">arguments</span> are between the () seperated by ","</p>
+				<pre class="fragment"><code>
+	function showDistance(speed, time){
+		alert(speed * time)
+	}
+	showDistance(56,7)
+					</code></pre>
+			</section>
+			<section>
+				<p class="fragment">Function call: order matters</p>
+				<img src="assets/function-call.png">
+			</section>
+			<section>
+					<p class="fragment">Function arguments are treated as variable</p>
+					<img src="assets/function-arguments.png">
+				</section>
 		</div>
 	</div>
 

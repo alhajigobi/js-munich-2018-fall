@@ -5,3 +5,6 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 [Lesson 1](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson1/)
 
 [Lesson 2](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson2/)
+
+[Lesson 3](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson3/)
+

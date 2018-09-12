@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<title>ReDI.js 1</title>
+	<title>ReDI.js 2</title>
 	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
 	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
@@ -48,31 +48,40 @@
 		<div class="slides">
 			<section>
 				<h1>Intro to JavaScript</h1>
-				<h3>Lesson 2</h3>
+				<h3>🚀 Lesson 2 🚀</h3>
 			</section>
+
 			<section>
 				<h1>Quiz!</h1>
 			</section>
 			<section>
 				<ul>
-					<li>What does the following code do?</li>
+					<li>Where is the client?</li>
+					<li class="fragment">Where is the server?</li>
+					<li class="fragment">Which one can be programmed by JS?</li>
+					<li class="fragment">On which are we focussing for now?</li>
+				</ul>
+			</section>
+			<section>
+				<h4>What does the following code do?</h4>
+				<ul>
 					<li class="fragment">
 						<pre><code>alert("Yo yo yo!");</code></pre>
 					</li>
 					<li class="fragment">
 						<pre><code>alert(name);</code></pre>
 					</li>
-					<li class="fragment">What happened? 🤔</li>
-
 				</ul>
+				<p class="fragment">What happened? 🤔</p>
 			</section>
 			<section>
-				<h3 class="fragment">We forgot to define the name.</h3>
+				<h4>We forgot to define the name!</h4>
 				<ul>
-					<li class="fragment">How to tell the javascript interpreter that the 'name' is a variable?</li>
+					<li class="fragment">How to tell Javascript that 'name' is a variable?</li>
 					<li class="fragment">
-						<pre><code>let name</code></pre>
+						<pre><code>let name;</code></pre>
 					</li>
+					<li class="fragment">How to print out "Hello (name)"?</li>
 					<li class="fragment">
 						<pre><code>let name = "Alex";
 alert("What's up " + name);</code></pre>
@@ -81,8 +90,7 @@ alert("What's up " + name);</code></pre>
 			</section>
 			<section>
 				<ul>
-					<li class="fragment">How to tell the javascript interpreter that the 'name' is a variable?</li>
-					<li class="fragment">What's a variable again?</li>
+					<li>What's a variable again?</li>
 					<li class="fragment">What do you store in a variable?</li>
 				</ul>
 			</section>
@@ -90,24 +98,52 @@ alert("What's up " + name);</code></pre>
 				<h3>How many did you get right?</h3>
 				<h3>🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊🎉🎊</h3>
 			</section>
+
 			<section>
 				<h3>Bonus Round: HTML & CSS</h3>
+			</section>
+			<section>
 				<ul>
-					<li class="fragment">Name 3 types of CSS selectors</li>
-					<li class="fragment">class, ID, type</li>
-					<li class="fragment">Fill in the ... part
+					<li>What are the two components of the &lt;html&gt; tag?</li>
+					<li class="fragment">→ &lt;head&gt; and &lt;body&gt;</li>
+					<li class="fragment">What goes into the &lt;head&gt; tag?</li>
+					<li class="fragment">What goes into the &lt;body&gt; tag?</li>
+					<li class="fragment">How do you add a paragraph in HTML?</li>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li>How do you add a CSS style to all paragraphs on your page?</li>
+					<li class="fragment">→ <code>p { ... }</code></li>
+					<li class="fragment">How do you change the font-size of paragraphs?</li>
+					<li class="fragment">→ <code>p { font-size: 24px; }</code></li>
+					<li class="fragment">What's the padding of an element? What's the margin?</li>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li>Name 3 types of CSS selectors</li>
+					<li class="fragment">→ e.g. class, ID, type</li>
+					<li class="fragment">Fill in the ... part:
 						<pre><code>&lt;link ...="stylesheet" ...="text/css" ...="theme.css"&gt;</code></pre>
 					</li>
-					<li class="fragment">
+					<li class="fragment">→
 						<pre><code>&lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;</code></pre>
 					</li>
 					<li class="fragment">Where do you usually put the link tag?</li>
-					<li class="fragment">
+					<li class="fragment">→
 						<pre><code>&lt;head&gt;
 	&lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;
 &lt;/head&gt;</code></pre>
 					</li>
+				</ul>
 			</section>
+
+			<section>
+				<h3>Last week's homework!</h3>
+				<p>Who wants to present theirs?</p>
+			</section>
+
 			<section>
 				<h1>Lesson 2: Variables and Functions</h1>
 			</section>
@@ -156,28 +192,27 @@ alert("What's up " + name);</code></pre>
 				<br>
 				<br>
 				<br>
-				<br>
 				<ul>
-					<li class="fragment">Remeber varibles? 📦</li>
-					<li class="fragment">How do we name a varible? There are a few rules.</li>
+					<li class="fragment">Remember variables? 📦</li>
+					<li class="fragment">How do we name a variable? There are a few rules.</li>
 				</ul>
 			</section>
 
 			<section>
-				<h3>Naming varibles</h3>
+				<h3>Naming variables</h3>
 				<pre><code>let myText = "hello, world!";</code></pre>
 				<ul>
-					<li class="fragment">length:</li>
+					<li class="fragment">Length:</li>
 					<li class="fragment">1 to few thousands</li>
 					<li class="fragment">Restriction:</li>
 					<li class="fragment">Can start with "_" or "$" but no number</li>
-					<li class="fragment">What else?:</li>
+					<li class="fragment">What else?</li>
 					<li class="fragment">That's it! Other than the first character, any combination of lower case or upper case letters,
 						number, "_" or "$"</li>
 				</ul>
 			</section>
 			<section>
-				<h3>Varible name examples:</h3>
+				<h3>Possible variable name examples:</h3>
 				<pre><code>let myText;</code></pre>
 				<pre><code>let $;</code></pre>
 				<pre><code>let r8;</code></pre>
@@ -185,6 +220,30 @@ alert("What's up " + name);</code></pre>
 				<pre><code>let thisIsALongVariableName_butItCanBeLonger;</code></pre>
 				<pre><code>let __$abc;</code></pre>
 				<pre><code>let oldSchoolName;</code></pre>
+			</section>
+			<section>
+				<h3>What makes a good variable name?</h3>
+				<ul>
+					<li class="fragment">Is <code>xxx</code> a good variable name?</li>
+					<li class="fragment">Is <code>myVariable</code> a good variable name?</li>
+					<li class="fragment">Is <code>age</code> a good variable name?</li>
+					<li class="fragment">→ Name should describe what is stored in the variable!</li>
+					<li class="fragment">→ Otherwise code will be hard to read and understand</li>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li>In JavaScipt, it is common to use camelCase 🐫</li>
+					<li class="fragment">"blog post title" becomes "blogPostTitle"</li>
+					<li class="fragment">"number of users" becomes ...?</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Good! Variable name examples:</h3>
+				<pre><code>let userCount;</code></pre>
+				<pre><code>let guestName;</code></pre>
+				<pre><code>let pageTitle;</code></pre>
+				<pre><code>let pageViewsPerDay;</code></pre>
 			</section>
 			<section>
 				<h4>What does this do?</h4>
@@ -225,47 +284,41 @@ alert("What's up " + name);</code></pre>
 				<h1>Functions</h1>
 			</section>
 			<section>
-				<p>So it is nothing wrong with</p>
-				<pre><code>alert("Hello world!");</code></pre>
-				<ul>
-					<li class="fragment">BUT you will never have 1 line js :D</li>
-				</ul>
+				<p>So there is nothing wrong with</p>
+				<p><pre><code>alert("Hello world!");</code></pre></p>
+				<br>
+				<p class="fragment">BUT you will never have 1 line of JS 😁</p>
 			</section>
 			<section>
-				<p>Let say I want to find the distance a space ship travels</p>
+				<p>Let's say I want to find the distance a space ship travels</p>
 				<h1>------------&gt; 🚀</h1>
 				<ul>
-					<li class="fragment"><span class="emphasis">distance</span>= speed * time</li>
-					<li class="fragment">In Javascript:</li>
+					<li class="fragment"><span class="emphasis">distance </span>= speed * time</li>
+					<li class="fragment">In JavaScript:</li>
 					<li class="fragment">
-						<pre><code>
-	let speed = 10;
-	let time = 5;
-	alert(speed * time);
-						</code></pre>
+						<pre><code>let speed = 10;
+let time = 5;
+alert(speed * time);</code></pre>
 					</li>
 				</ul>
 			</section>
 			<section>
 				<p>And if I have more values?</p>
-				<pre class="fragment"><code>
-	let speed1 = 56;
-	let time1 = 7;
-	alert(speed1 * time1);
+				<pre class="fragment"><code>let speed1 = 56;
+let time1 = 7;
+alert(speed1 * time1);
 
-	let speed2 = 12;
-	let time2 = 3;
-	alert(speed2 * time2);
+let speed2 = 12;
+let time2 = 3;
+alert(speed2 * time2);
 
-	let speed3 = 9;
-	let time3 = 88;
-	alert(speed3 * time3);
+let speed3 = 9;
+let time3 = 88;
+alert(speed3 * time3);
 
-	let speed4 = 64;
-	let time4 = 90;
-	alert(speed4 * time4);
-
-						</code></pre>
+let speed4 = 64;
+let time4 = 90;
+alert(speed4 * time4);</code></pre>
 				</li>
 				</ul>
 			</section>
@@ -275,18 +328,17 @@ alert("What's up " + name);</code></pre>
 			</section>
 			<section>
 				<h2>Solve it by Function!</h2>
-				<pre class="fragment"><code>
-	function showDistance(speed, time){
-		alert(speed * time);
-	}
-	showDistance(56,7);
-	showDistance(12,3);
-	showDistance(9,88);
-	showDistance(64,90);
-					</code></pre>
+				<pre class="fragment"><code>function showDistance (speed, time) {
+  alert(speed * time);
+}
+
+showDistance(56, 7);
+showDistance(12, 3);
+showDistance(9, 88);
+showDistance(64, 90);</code></pre>
 			</section>
 			<section>
-				<p>Defintion of a function</p>
+				<p>Definition of a function</p>
 				<ul>
 					<li class="fragment">Group statements together</li>
 					<li class="fragment">Make your code reuseable</li>
@@ -294,55 +346,91 @@ alert("What's up " + name);</code></pre>
 			</section>
 			<section>
 				<p>Dive in: Create a simple function to say hello with alert</p>
-				<pre class="fragment"><code>
+				<pre class="fragment"><code data-trim>
 function sayHello() {
-	alert("hello!");
+  alert("hello!");
 }
 sayHello();
 				</code></pre>
 			</section>
 			<section>
-				<p class="fragment">What is an argument?</p>
-				<p class="fragment">Remeber alert("Hello!") ?</p>
-				<p class="fragment">Another example: showDistance(speed,time) ?</p>
-				<p class="fragment"><span class="emphasis">arguments</span> are between the () seperated by ","</p>
-				<pre class="fragment"><code>
-	function showDistance(speed, time){
-		alert(speed * time);
-	}
-	showDistance(56,7);
+				<p>What is an argument?</p>
+				<p class="fragment">Remember alert("Hello!") ?</p>
+				<p class="fragment">Or showDistance(speed,time) ?</p>
+				<p class="fragment"><span class="emphasis">arguments</span> are between the () seperated by ,</p>
+				<pre class="fragment"><code data-trim>
+function showDistance(speed, time) {
+  alert(speed * time);
+}
+showDistance(56,7);
 					</code></pre>
 			</section>
 			<section>
-				<p class="fragment">Function call: order matters</p>
+				<p>Function call: order matters</p>
 				<img src="assets/function-call.png">
 			</section>
 			<section>
-				<p class="fragment">Function arguments are treated as variable</p>
+				<p>Function arguments are treated like variables inside the function</p>
 				<img src="assets/function-arguments.png">
 			</section>
 			<section>
-				<p class="fragment">Dive in: Code a function named <span class="emphasis">askName </span>that prompts the user to <span class="emphasis">"Enter
-						name"</span> and assigns the answer to <span class="emphasis">userName</span>, which hasn't been declared beforehand. Then use alert to show the name. Don't
-					forget to make the function call.</p>
-				<pre class="fragment"><code>
-	function askName() {
-		let userName = prompt("Enter name");
-		alert(userName);
-	}
-	askName();
-					</code><pre>
+				<h3>Dive in:</h3>
+				<ul>
+					<li>Code a function named <span class="emphasis">askName</span></li>
+					<li>Prompts the user to <span class="emphasis">"Enter name"</span></li>
+					<li>Then assigns the answer to <span class="emphasis">userName</span>, which hasn't been declared beforehand</li>
+					<li>Then use alert to show the name.</li>
+					<li>Don't forget to make the function call.</li>
+				</ul>
+				<pre class="fragment"><code data-trim>
+function askName() {
+  let userName = prompt("Enter name");
+  alert(userName);
+}
+askName();
+					</code></pre>
 			</section>
 			<section>
-				<p class="fragment">Dive in: Code a function named <span class="emphasis">addStrings </span>takes 2 arguments. Combine
-					the 2 strings and store it. Then show the the stored varible in an alert box. Don't forget to make the function call.</p>
-					<pre class="fragment"><code>
-	function addStrings(string1, string2) {
-		let combine = string1 + string2;
-		alert(combine);
-	}
-	addStrings("One", "Apple");
-					</code><pre>
+				<h3>Dive in:</h3>
+				<ul>
+					<li>Code a function named <span class="emphasis">addStrings</span></li>
+					<li>Takes 2 arguments</li>
+					<li>Combine the 2 strings and store it</li>
+					<li>Then show the the stored Variable in an alert box</li>
+					<li>Don't forget to make the function call.</li>
+				</ul>
+				<pre class="fragment"><code data-trim>
+function addStrings(string1, string2) {
+  let combine = string1 + string2;
+  alert(combine);
+}
+addStrings("One", "Apple");
+				</code></pre>
+			</section>
+			<section>
+				<h3>Dive in:</h3>
+				<ul>
+					<li>Code a function named <span class="emphasis">addNumbers</span></li>
+					<li>Asks the user for two numbers</li>
+					<li>Add them together and print them in an alert</li>
+				</ul>
+				<pre class="fragment"><code data-trim>
+function addNumbers() {
+  let number1 = prompt("Please enter your first number:");
+  let number2 = prompt("Please enter your second number:");
+  let sum = number1 + number2;
+  alert(sum);
+}
+addNumbers();
+				</code></pre>
+				<p class="fragment">
+					What happened?!? 😱
+				</p>
+			</section>
+
+			<section>
+				<h3>Homework</h3>
+				<p>Think about what went wrong in the last exercise!</p>
 			</section>
 		</div>
 	</div>

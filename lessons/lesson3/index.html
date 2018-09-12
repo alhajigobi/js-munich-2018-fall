@@ -309,6 +309,59 @@ MoltiplicationTable(2);
 						</code></pre>
             </section>
 
+
+            <section>
+                <p>another option is </p>
+                <h1 class="fragment">The "do ... while" loop</h1>
+            </section>
+
+
+            <section>
+                <p>The loop will first execute the body, then check the condition and, while it’s truthy, execute it again and again.</p>
+                <p class="fragment">the syntax is</p>
+                <pre class="fragment"><code>
+	do {
+		// loop body
+	} while (condition);</code></pre>
+
+
+                <p class="fragment">let's try it!</p>
+                <pre class="fragment"><code>
+	let i = 0;
+	do {
+		alert( i );
+		i++;
+	} while (i < 3);</code></pre>
+
+            </section>
+
+            <section>
+                <p>This form of syntax is rarely used</p>
+                <p>Usually, the other form is preferred: <code>while(…) {…}</code>.</p>
+            </section>
+
+            <section>
+                <h3>Dive in:</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">BigNumber2</span></li>
+                    <li>keep asking/promt to the user to insert a number</li>
+                    <li>only if the number is bigger than 1000 stop asking</li>
+                    <li>otherwise promt again the question (please use do/while)</li>
+
+                </ul>
+                <pre class="fragment"><code data-trim>
+	function BigNumber2() {
+		let number = 0;
+		do {
+			number = prompt("Give me a number");
+			console.log("Received number: " + number);
+		} while (number < 1000);
+		alert(number+ " is bigger than 1000")
+	}
+	BigNumber2();</code></pre>
+            </section>
+
+
             <section>
                 <h3>Homework</h3>
                 <div class="fragment">
@@ -327,6 +380,7 @@ MoltiplicationTable(2);
                 </div>
                 <p class="fragment">PLEASE use the <code>for/while</code> loop</p>
             </section>
+
 
         </div>
     </div>

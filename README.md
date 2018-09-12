@@ -2,7 +2,6 @@
 This repo contains teaching material and assignments for ReDI School in Munich Javascript course for 2018 Fall semester.
 
 
-#Lessons
-
 [Lesson 1](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson1/)
+
 [Lesson 2](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson2/)

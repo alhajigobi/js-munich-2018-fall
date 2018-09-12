@@ -228,18 +228,37 @@
                 <pre class="fragment"><code>
 	for (begin; condition; step) {
 		// ... loop body ...
-	}
-						</code></pre>
+	}</code></pre>
 
                 <p class="fragment">let's try it!</p>
                 <pre class="fragment"><code>
 	for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
 		alert(i);
-	}
-						</code></pre>
+	}</code></pre>
 
             </section>
 
+            </section>
+
+            <section>
+                <h3>Dive in:</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">MoltiplicationTable</span></li>
+                    <li>Takes 1 argument</li>
+                    <li>and print the moltiplication table for that number</li>
+                    <li>e.g. 2x1=2 2x2=4 2x3=6 2x4=8 etc... until 2x10=20</li>
+                    <li>Don't forget to make the function call.</li>
+                </ul>
+                <pre class="fragment"><code data-trim>
+function MoltiplicationTable(int1) {
+	console.log("MoltiplicationTable of: " + int1)
+	for (let j = 1; j <= 10; j++) {
+		console.log(int1 + " x " + j + " = " + (int1 * j));
+	}
+}
+MoltiplicationTable(2);
+					</code></pre>
+            </section>
 
             <section>
                 <p>another option is </p>
@@ -254,8 +273,7 @@
 	while (condition) {
 		// code
 		// so-called "loop body"
-	}
-						</code></pre>
+	}</code></pre>
 
 
                 <p class="fragment">let's try it!</p>
@@ -264,29 +282,30 @@
 	while (i < 3) { // shows 0, then 1, then 2
 		alert( i );
 		i++;
-	}
-						</code></pre>
+	}</code></pre>
 
             </section>
 
             <section>
                 <h3>Dive in:</h3>
                 <ul>
-                    <li>Code a function named <span class="emphasis">MoltiplicationTable</span></li>
-                    <li>Takes 1 argument</li>
-                    <li>and print the moltiplication table for that number</li>
-                    <li>e.g. 2x1=2 2x2=4 2x3=6 2x4=8 etc... until 2x10=20</li>
-                    <li>Don't forget to make the function call.</li>
+                    <li>Code a function named <span class="emphasis">BigNumber</span></li>
+                    <li>keep asking/promt to the user to insert a number</li>
+                    <li>only if the number is bigger than 1000 stop asking</li>
+                    <li>otherwise promt again the question</li>
                 </ul>
                 <pre class="fragment"><code data-trim>
-	function MoltiplicationTable(int1) {
-		console.log("MoltiplicationTable of: " + int1)
-		for (let j = 1; j <= 10; j++) {
-			console.log(int1 + " x " + j + " = " + (int1 * j));
+	function BigNumber() {
+		let number = 0;
+		while (number < 1000) {
+			number = prompt("Give me a number");
+			console.log("Received number: " + number);
+			
 		}
+		alert(number+ " is bigger than 1000")
 	}
-	MoltiplicationTable(2);
-	MoltiplicationTable(5);
+	BigNumber();
+
 						</code></pre>
             </section>
 
@@ -318,6 +337,7 @@
     <script>
         Reveal.initialize({
             history: true,
+            slideNumber: true,
             dependencies: [{
                 src: '../../reveal.js/plugin/highlight/highlight.js',
                 async: false,

@@ -185,7 +185,7 @@
                     let x = 20;
                     let y = 30;
 
-                    if (x == y) {
+                    if (x === y) {
                         alert('Yes');
                     } else {
                         alert('No');
@@ -236,7 +236,7 @@
                     let guessedColor = prompt('Which color is my favorite?');
 
                     // Check whether the user guessed correctly:
-                    if (guessedColor == favoriteColor) {
+                    if (guessedColor === favoriteColor) {
                         alert("Wow! That's correct :)");
                     } else {
                         alert("Sorry! That's not my favorite color... :(")
@@ -457,14 +457,14 @@
                     <pre class="fragment"><code data-trim>
                         let x = prompt("Please enter the first number");
                         let y = prompt("Please enter the second number");
-                        alert(x == y);
+                        alert(x === y);
                     </code></pre>
                     <br>
                     <li class="fragment">We can also put the result into a variable:</li>
                     <pre class="fragment"><code data-trim>
                         let x = 12;
                         let y = 12;
-                        let z = x == y;
+                        let z = x === y;
                         alert("z is a " + typeof(z) + " and contains " + z);
                     </code></pre>
                 </ul>
@@ -472,12 +472,12 @@
             <section>
                 <h3>Types of comparisons</h3>
                 <ul>
-                    <li>We've seen <code>==</code> <i>(equals)</i></li>
+                    <li>We've seen <code>===</code> <i>(equals)</i></li>
                     <li class="fragment"><code><</code> <i>(smaller than)</i></li>
                     <li class="fragment"><code>></code> <i>(larger than)</i></li>
                     <li class="fragment"><code><=</code> <i>(smaller or equal than)</i></li>
                     <li class="fragment"><code>>=</code> <i>(larger or equal than)</i></li>
-                    <li class="fragment"><code>!=</code> <i>(not equal)</i></li>
+                    <li class="fragment"><code>!==</code> <i>(not equal)</i></li>
                 </ul>
             </section>
             <section>
@@ -487,11 +487,11 @@
                     <li class="fragment"><pre><code>alert(12 < 33);</code></pre></li>
                     <li class="fragment"><pre><code>alert(12 < 12);</code></pre></li>
                     <li class="fragment"><pre><code>alert(12 <= 12);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(12 == 33);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(12 != 33);</code></pre></li>
-                    <li class="fragment"><pre><code>alert("bla" == "bla");</code></pre></li>
-                    <li class="fragment"><pre><code>alert("bla" != "bla");</code></pre></li>
-                    <li class="fragment"><pre><code>alert("bla" == 12);</code></pre></li>
+                    <li class="fragment"><pre><code>alert(12 === 33);</code></pre></li>
+                    <li class="fragment"><pre><code>alert(12 !== 33);</code></pre></li>
+                    <li class="fragment"><pre><code>alert("bla" === "bla");</code></pre></li>
+                    <li class="fragment"><pre><code>alert("bla" !== "bla");</code></pre></li>
+                    <li class="fragment"><pre><code>alert("bla" === 12);</code></pre></li>
                 </ul>
             </section>
             <section>

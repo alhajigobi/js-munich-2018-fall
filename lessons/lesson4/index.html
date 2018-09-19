@@ -426,90 +426,15 @@
             </section>
 
             <section>
-                <ul>
-                    <li>There are other types of variables</li>
-                    <li class="fragment">You have used another type without noticing it!</li>
-                    <li class="fragment"><b>→ Boolean!</b></li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Booleans</h3>
-                <ul>
-                    <li>Are like switches 🎚</li>
-                    <li class="fragment">They can either be on, or off!</li>
-                    <li class="fragment"><b><code>true</code> or <code>false</code>!</b></li>
-                    <pre class="fragment"><code data-trim>
-                        let x = true;
-                        let y = false;
-                        alert("x is a " + typeof(x) + " and contains " + x);
-                        alert("y is a " + typeof(y) + " and contains " + y);
-                    </code></pre>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Comparisons ⚖️</h3>
-                <ul>
-                    <li>Comparisons are what we put inside a if(...)</li>
-                    <li class="fragment">Are used to compare two values</li>
-                    <li class="fragment">They result in booleans!</li>
-                    <pre class="fragment"><code data-trim>
-                        let x = prompt("Please enter the first number");
-                        let y = prompt("Please enter the second number");
-                        alert(x === y);
-                    </code></pre>
-                    <br>
-                    <li class="fragment">We can also put the result into a variable:</li>
-                    <pre class="fragment"><code data-trim>
-                        let x = 12;
-                        let y = 12;
-                        let z = x === y;
-                        alert("z is a " + typeof(z) + " and contains " + z);
-                    </code></pre>
-                </ul>
-            </section>
-            <section>
-                <h3>Types of comparisons</h3>
-                <ul>
-                    <li>We've seen <code>===</code> <i>(equals)</i></li>
-                    <li class="fragment"><code><</code> <i>(smaller than)</i></li>
-                    <li class="fragment"><code>></code> <i>(larger than)</i></li>
-                    <li class="fragment"><code><=</code> <i>(smaller or equal than)</i></li>
-                    <li class="fragment"><code>>=</code> <i>(larger or equal than)</i></li>
-                    <li class="fragment"><code>!==</code> <i>(not equal)</i></li>
-                </ul>
-            </section>
-            <section>
-                <h3>Guess the results:</h3>
-                <ul>
-                    <li><pre><code>alert(12 > 33);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(12 < 33);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(12 < 12);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(12 <= 12);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(12 === 33);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(12 !== 33);</code></pre></li>
-                    <li class="fragment"><pre><code>alert("bla" === "bla");</code></pre></li>
-                    <li class="fragment"><pre><code>alert("bla" !== "bla");</code></pre></li>
-                    <li class="fragment"><pre><code>alert("bla" === 12);</code></pre></li>
-                </ul>
-            </section>
-            <section>
-                <ul>
-                    <li>There are many other ways to create complex comparisons!</li>
-                    <li class="fragment">We will cover them later 😁</li>
-                </ul>
-            </section>
-
-            <section>
                 <h3>Homework</h3>
-                <p class="emphasis">Build a function that compares positive numbers</p>
+                <h4>Power function!</h4>
                 <ul>
-                    <li>Takes two numbers as arguments</li>
-                    <li>Returns <code>true</code> if they are equal</li>
-                    <li>But only if they are both positive numbers (greater than or equal 0)</li>
-                    <li>Otherwise, always return <code>false</code></li>
-                    <li>Add some comments to explain the code</li>
+                    <li>Write a function <code>power(a, b)</code> that works like this:</li>
+                    <li><code>power(3, 2) = 3 * 3 = 9</code></li>
+                    <li><code>power(4, 3) = 4 * 4 * 4 = 64</code></li>
+                    <li><code>power(5, 1) = 5 = 5</code></li>
+                    <li><code>power(3, 4) = 3 * 3 * 3 * 3 = 81</code></li>
+                    <li>Use the for-loop!</li>
                 </ul>
             </section>
         </div>

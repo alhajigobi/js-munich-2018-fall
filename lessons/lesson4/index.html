@@ -83,7 +83,12 @@
                     </code></pre>
                 </ul>
             </section>
-
+            <section>
+                <p>What does this do?</p>
+                <pre><code data-trim>
+                    alert("Hehe"); // This shows "Hehe"
+                </code></pre>
+            </section>
             <section>
                 <p>What does this do?</p>
                 <pre><code data-trim>
@@ -107,8 +112,8 @@
                 <ul>
                     <li class="fragment">Are like <b>factories</b> 🏭</li>
                     <li class="fragment">You can <b>put in some stuff</b> <i>(arguments)</i> 📦</li>
-                    <li class="fragment">The factory <b>does something with it</b> <i>(function body)</i> ⚙️</li>
-                    <li class="fragment">It can <b>output completely different things</b> <i>(return value)</i> ️⛵️</li>
+                    <li class="fragment">The factory <b>does something</b> <i>(function body)</i> ⚙️</li>
+                    <li class="fragment">Then <b>outputs something else</b> <i>(return value)</i> ️⛵️</li>
                 </ul>
             </section>
             <section>
@@ -120,6 +125,7 @@
                         return ship;
                     }
                 </code></pre>
+                <p class="fragment">To call it:</p>
                 <pre class="fragment"><code data-trim>
                     let myPlanks = ...;
                     let mySails = ...;
@@ -130,7 +136,7 @@
                 <p>What does this do?</p>
                 <pre><code data-trim>
                     function myFunction(myArg) {
-                        alert('You ran myFunction with argument ' + myArg);
+                        alert("You ran myFunction with argument " + myArg);
                     }
                     let myArg = 'whoops';
                 </code></pre>
@@ -177,6 +183,12 @@
                 <h3>for-loop 🎢</h3>
                 <ul>
                     <li class="fragment">Repeats a block of code several times</li>
+                    <li class="fragment">Example:</li>
+                    <pre class="fragment"><code data-trim>
+                        for (let i = 0; i < 4; i += 1) {
+                            alert(i)
+                        }
+                    </code></pre><br>
                     <li class="fragment">We will look at it again later</li>
                 </ul>
             </section>
@@ -467,12 +479,12 @@
 
             <section>
                 <h3>Homework</h3>
-                <p>Build a function that:</p>
+                <p class="emphasis">Build a function that compares positive numbers</p>
                 <ul>
-                    <li>Takes two arguments</li>
-                    <li>Returns <code>true</code> if they are NOT equal!</li>
-                    <li>If one of them is of type <code>boolean</code>, then always return <code>true</code>!</li>
-                    <li>Use comparisons and <code>typeof(...)</code></li>
+                    <li>Takes two numbers as arguments</li>
+                    <li>Returns <code>true</code> if they are equal</li>
+                    <li>But only if they are both positive numbers (greater than or equal 0)</li>
+                    <li>Otherwise, always return <code>false</code></li>
                     <li>Add some comments to explain the code</li>
                 </ul>
             </section>

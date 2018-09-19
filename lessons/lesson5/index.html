@@ -1,0 +1,248 @@
+<html>
+
+<head>
+    <title>ReDI.js 5</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <style>
+        .reveal pre {
+            margin: 0;
+        }
+
+        .monospace {
+            font-family: monospace !important;
+        }
+
+        .illustration {
+            border: 0px
+        }
+
+        .reveal li {
+            margin-bottom: 0.5em;
+        }
+
+        .reveal pre {
+            width: 100%;
+        }
+
+        .reveal pre code {
+            cursor: pointer;
+        }
+
+        .reveal li pre {
+            width: fit-content;
+        }
+
+        .emphasis {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .logo {
+            position: fixed;
+            /* Sit on top of the page content */
+            z-index: 2;
+            /* Specify a stack order in case you're using a different order for other elements */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>🚀 Lesson 4 🚀</h3>
+            </section>
+
+            <section>
+                <h2>Recap:</h2>
+                <h1>what FOR loop</h1>
+                <p>The <code data-trim>for</code> loop is the most often used one.</p>
+
+                <p class="fragment">example</p>
+                <pre class="fragment"><code data-trim>
+                    for (let i = 0; i < 3; i++) {
+                        // shows 0, then 1, then 2
+                        alert(i);
+                    }
+                </code></pre>
+
+            </section>
+
+            <section>
+                <h3>Dive in:</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">MultiplicationTable</span></li>
+                    <li>Takes 1 argument</li>
+                    <li>and print the multiplication table for that number</li>
+                    <li>e.g. 2x1=2 2x2=4 2x3=6 2x4=8 etc... until 2x10=20</li>
+                    <li>Don't forget to make the function call.</li>
+                </ul>
+                <pre class="fragment"><code data-trim>
+                    function MultiplicationTable(int1) {
+                        console.log("MultiplicationTable of: " + int1)
+                        for (let j = 1; j <= 10; j++) {
+                            console.log(int1 + " x " + j + " = " + (int1 * j));
+                        }
+                    }
+                    MultiplicationTable(2);
+					</code></pre>
+            </section>
+
+            <section>
+                <p>another option is </p>
+                <h1 class="fragment">The "while" loop</h1>
+            </section>
+
+
+            <section>
+                <p>While the <code data-trim>condition</code> is <code data-trim>true</code>, the <code data-trim>code</code> from the loop body is executed.</p>
+                <p class="fragment">the syntax is</p>
+                <pre class="fragment"><code data-trim>
+	while (condition) {
+		// code
+		// so-called "loop body"
+	}</code></pre>
+
+
+                <p class="fragment">let's try it!</p>
+                <pre class="fragment"><code data-trim>
+	let i = 0;
+	while (i < 3) { // shows 0, then 1, then 2
+		alert( i );
+		i++;
+	}</code></pre>
+
+            </section>
+
+            <section>
+                <h3>Dive in:</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">BigNumber</span></li>
+                    <li>keep asking/promt to the user to insert a number</li>
+                    <li>only if the number is bigger than 1000 stop asking</li>
+                    <li>otherwise promt again the question</li>
+                </ul>
+                <pre class="fragment"><code data-trim>
+	function BigNumber() {
+		let number = 0;
+		while (number < 1000) {
+			number = prompt("Give me a number");
+			console.log("Received number: " + number);
+
+		}
+		alert(number+ " is bigger than 1000")
+	}
+	BigNumber();
+
+						</code></pre>
+            </section>
+
+
+            <section>
+                <p>another option is </p>
+                <h1 class="fragment">The "do ... while" loop</h1>
+            </section>
+
+
+            <section>
+                <p>The loop will first execute the body, then check the condition and, while it’s truthy, execute it again and again.</p>
+                <p class="fragment">the syntax is</p>
+                <pre class="fragment"><code data-trim>
+	do {
+		// loop body
+	} while (condition);</code></pre>
+
+
+                <p class="fragment">let's try it!</p>
+                <pre class="fragment"><code data-trim>
+	let i = 0;
+	do {
+		alert( i );
+		i++;
+	} while (i < 3);</code></pre>
+
+            </section>
+
+            <section>
+                <p>This form of syntax is rarely used</p>
+                <p>Usually, the other form is preferred: <code data-trim>while(…) {…}</code>.</p>
+            </section>
+
+            <section>
+                <h3>Dive in:</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">BigNumber2</span></li>
+                    <li>keep asking/promt to the user to insert a number</li>
+                    <li>only if the number is bigger than 1000 stop asking</li>
+                    <li>otherwise promt again the question (please use do/while)</li>
+
+                </ul>
+                <pre class="fragment"><code data-trim>
+	function BigNumber2() {
+		let number = 0;
+		do {
+			number = prompt("Give me a number");
+			console.log("Received number: " + number);
+		} while (number < 1000);
+		alert(number+ " is bigger than 1000")
+	}
+	BigNumber2();</code></pre>
+            </section>
+
+
+            <section>
+                <h3>Homework</h3>
+                <div class="fragment">
+                    <p>ask/prompt to the user "What's your Name?"</p>
+                    <p>ask/prompt to the user "How old are you?"</p>
+                </div>
+                <div class="fragment">
+                    <p>add an alert message when the user have 18 years old</p>
+                    <i>e.g. "Hi Giulio, in 2004 you had 18 years old"</i>
+
+                </div>
+                <div class="fragment">
+                    <p>add alert message only if the user is older than 30</p>
+                    <i>e.g. "Hi Giulio, in xxxx you have more than 30 years old"</i>
+
+                </div>
+                <p class="fragment">PLEASE use the <code data-trim>for/while</code> loop</p>
+            </section>
+
+
+        </div>
+    </div>
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, ]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function() {
+            $('code').click(function(event) {
+                console.info('Click!', $(this).text());
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>

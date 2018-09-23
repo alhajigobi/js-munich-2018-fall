@@ -19,16 +19,15 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - how to comment 
 - using `console.log("hello");`
 
-
-
 ## [Lesson 4](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson4/)
 - The `while` statement
 - The `do/while` statement
 
-
-## Lesson 5
-- let's it!
-
+## [Lesson 5](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson5/)
+- Debugging
+- [Quiz](https://redi-school.github.io/js-munich-2018-fall/quizes/quiz1/)
+- Boolean values
+- Logical operators
 
 ## Lesson 6
 - list

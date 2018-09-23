@@ -1,0 +1,252 @@
+<html>
+
+<head>
+    <title>ReDI.js 4</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <style>
+        .reveal pre {
+            margin: 0;
+        }
+
+        .monospace {
+            font-family: monospace !important;
+        }
+
+        .illustration {
+            border: 0px
+        }
+
+        .reveal li {
+            margin-bottom: 0.5em;
+        }
+
+        .reveal pre {
+            width: 100%;
+        }
+
+        .reveal pre code {
+            cursor: pointer;
+        }
+
+        .reveal li pre {
+            width: fit-content;
+        }
+
+        .emphasis {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .logo {
+            position: fixed;
+            /* Sit on top of the page content */
+            z-index: 2;
+            /* Specify a stack order in case you're using a different order for other elements */
+        }
+
+        h3 {
+            text-transform: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Quiz 1</h1>
+                <h3>🙀</h3>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    console.log("Hello");
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    console.log("Hello", "World");
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let a = 0;
+                    a += 2;
+                    console.log("a =", a);
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let a = -1;
+                    a++;
+                    console.log("a =", a);
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let a = 10, b = 20;
+                    /* b++; */
+                    a = b;
+                    console.log("a =", a);
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    console.log(10 + 10);
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    console.log("10" + 10);
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    console.log(10 + "10");
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let a = 1; a < 3; a++) {
+                        console.log(a);
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let a = 1; a < 3; a++) {
+                        if (a === 2) {
+                            console.log(a);
+                        }
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let a = 1; a < 3; a++) {
+                        if (a === 3) {
+                            console.log(a);
+                        }
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let a = 5; a >= 1; a--) {
+                        console.log(a);
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let a = 5; a < 5; a++) {
+                        console.log(a);
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let a = 5; a >= 5; a++) {
+                        console.log(a);
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    function sum(a, b) {
+                        let c = a + b;
+                    }
+
+                    let a = 1, b = 2;
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    function sum(a, b) {
+                        let c = a + b;
+                    }
+
+                    let s = sum(1,2);
+                    console.log(s);
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    function sum(a, b) {
+                        let c = a + b;
+                        return c;
+                    }
+
+                    console.log(sum(1,2));
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    console.log(typeof 10);
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    console.log(typeof "Hello");
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let num = prompt("Enter a number:");
+                    console.log(typeof num);
+                </code></pre>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, ]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function() {
+            $('code').click(function(event) {
+                // console.info('Click!', $(this).text());
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>

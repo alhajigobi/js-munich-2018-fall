@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>ReDI.js 5</title>
+    <title>ReDI.js 6</title>
     <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
     <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
     <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
@@ -59,27 +59,192 @@
                 <h3>🚀 Lesson 6 🚀</h3>
             </section>
 
-            <!-- Starting from here, this is Eugene's lesson 5 material that was not covered -->
+            <section>
+                <h3>Homework from last lesson:</h3>
+                <p class="emphasis">Build a function that compares positive numbers</p>
+                <ul>
+                    <li>Takes two numbers as arguments</li>
+                    <li>Returns <code>true</code> if they are equal</li>
+                    <li>But only if they are both positive numbers (greater than or equal 0)</li>
+                    <li>Otherwise, always return <code>false</code></li>
+                    <li>Add some comments to explain the code</li>
+                </ul>
+            </section>
 
+            <section>
+                <h3>Review</h3>
+                <ul>
+                    <li class="fragment">
+                        Can you name all the comparison operators?
+                    </li>
+                    <li class="fragment">
+                        What is the result of the comparison?
+                    </li>
+                    <li class="fragment">
+                        Hint: B??????
+                    </li>
+                    <li class="fragment">
+                        <pre><code>let z = x === y</code></pre>
+                    </li>
+                    <li class="fragment">
+                        What is the type of z?
+                    </li>
+                </ul>
+            </section>
 
+            <section>
+                A quick recap:
+                <h3>Review</h3>
+                <ul>
+                    <li class="fragment">
+                        In Boolean logic, a statement can be either <i>true</i> or <i>false</i>
+                    </li>
+                    <li class="fragment">
+                        It rains today.
+                    </li>
+                    <li class="fragment">
+                        In javascript:
+                        <pre><code data-trim>
+                            if (x==4) {
+                                do_something
+                            }
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        Not surprising but we can do more
+                    </li>
+
+                </ul>
+            </section>
             <section>
                 <h3>Logical operators</h3>
                 <ul>
-                    <li class="fragment">Often logic is too complex for a simple condition</li>
-                    <li class="fragment">Need to combine conditions together</li>
-                    <li class="fragment">and - &&</li>
-                    <li class="fragment">or - ||</li>
-                    <li class="fragment">not - !</li>
+                    <li class="fragment">It rains today AND my feet are getting wet</li>
+                    <li class="fragment">It rains today OR my feet are getting wet</li>
+                    <li class="fragment">
+                        In javascript:
+                        <pre><code data-trim>
+                            if (x == 4 || y > 0) {
+                                do_something;
+                            }
+                        </code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li class="fragment">Often we need to express more complex logic than <br> x > y</li>
+                    <li class="fragment">We need to combine conditions together</li>
+                    <li class="fragment">AND: &&
+                        <ul>
+                            <li>Example: (x==4 && y==1)</li>
+                        </ul>
+                    </li>
+
+                    <li class="fragment">OR: ||
+                        <ul>
+                            <li>Example: (x==4 || y==1)</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">NOT: !
+                        <ul>
+                            <li>Example: (x==4 && !(y==1))</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>&&</h3>
+                <ul>
+                    <li>When the first expression AND the second expression both evaluate to <span class="emphasis">true</span></li>
+                    <li class="fragment">Example:
+                        <pre><code data-trim>
+                            let x = 4; let y = 1;
+                            alert(x==4 && y==1); 
+                            alert(x==3 && y==1);
+                            alert(x==1 && y==0);
+                         </code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>||</h3>
+                <ul>
+                    <li>When either the first expression OR the second expression both evaluate to <span class="emphasis">true</span></li>
+                    <li class="fragment">Example:
+                        <pre><code data-trim>
+                            let x = 4; let y = 1;
+                            alert(x==4 || y==1); 
+                            alert(x==3 || y==1);
+                            alert(x==1 || y==0);
+                        </code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>!</h3>
+                <ul>
+                    <li>
+                        When the containing expression is false then it is <span class="emphasis">true</span>. In other word
+                        it negates the result.</li>
+                    <li class="fragment">Example:
+                        <pre><code data-trim>
+                            let x = 4; let y = 1;
+                            alert(x==4 && !(y==1)); 
+                            alert(x==3 && !(y==1));
+                            alert(x==1 && !(y==0));
+                            alert(x==4 && !(y==0));
+                        </code></pre>
+                    </li>
                 </ul>
             </section>
 
             <section>
                 <h3>Guess the results:</h3>
                 <ul>
-                    <li><pre><code>alert(2 > 1 && 2 < 3);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(2 > 1 && 2 > 3);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(2 > 1 || 2 > 3);</code></pre></li>
-                    <li class="fragment"><pre><code>alert(!(2 > 1));</code></pre></li>
+                    <li>
+                        <pre><code>alert(2 > 1 && 2 < 3);</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code>alert(2 > 1 && 2 > 3);</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code>alert(2 > 1 || 2 > 3);</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code>alert(2 > 1 && !(2 > 1));</code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>You can build it up</h3>
+                <ul>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            if (x==4 && (!(y==1) || z==0)) {   
+                                do_something;
+                            }
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        What is the result?
+                        <pre><code data-trim>
+                            let x = 3; let y = 9; let z = 9
+                            alert(y >= x || (x===y && y > z));
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            let x = 3; let y = 9; let z = 9
+                            alert((y >=x && y < z) && !(x===y && y > z));
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            let x = 3; let y = 9; let z = 9
+                            alert((y === x || y === z) && !(x===y && y > z));
+                        </code></pre>
+                    </li>
                 </ul>
             </section>
 
@@ -87,37 +252,161 @@
                 <h3>Exercise</h3>
                 <ul>
                     <li>Rewrite the function from previous exercise using a <strong>single</strong> condition</li>
+                    <li class="fragment">
+                        Remember the conditionals are:
+                    </li>
+                    <li class="fragment">
+                        <pre><code>x === y</code></pre> -- return true if the two numbers are equals
+                        <pre><code>x > 0</code></pre> -- but only if both numbers are positive
+                        <pre><code>y > 0</code></pre>
+                    </li>
+                    <li class="fragment">
+                        Hint: You need to combine them with &&, || or !
+                    </li>
                 </ul>
             </section>
-
             <section>
-                <h3>Homework</h3>
-                <p class="emphasis">Build a function that calculates shipping fee for an order</p>
+                <h3>Exercise: complex conditionals</h3>
+                <p class="emphasis">Build a function that calculates shipping fee for an order and return it.</p>
                 <ul>
                     <li>Argument: order amount in EUR</li>
-                    <li>amount > 100 EUR, free shipping</li>
-                    <li>amount >= 50 EUR, fee = 5 EUR</li>
-                    <li>amount < 50 EUR, fee = 10 EUR</li>
+                    <li>amount &gt; 100 EUR, free shipping</li>
+                    <li>amount &gt;= 50 EUR, fee = 5 EUR</li>
+                    <li>amount &lt; 50 EUR, fee = 10 EUR</li>
                     <li>BONUS: add a boolean argument to indicate a discount of 20% on shipping</li>
                 </ul>
             </section>
-
             <section>
-                <h3>Resources</h3>
+                <p>Expansion of the <b>if</b> statement</p>
+                <h2 class="fragment"> <b>if-else</b> statement</h2>
+                <pre class="fragment"><code data-trim>
+                    let isRaining = checkRain();
+                    if(isRaining) {
+                        callMrPickleworth();
+                    } else {
+                        callMrsBloomington();
+                    }
+                </code></pre>
+            </section>
+            <section>
+                <p>More <b>if</b> statement</p>
+                <h2 class="fragment"> <b>if-else else-if</b> statement</h2>
+                <pre class="fragment"><code data-trim>
+                        let isRaining = checkRain();
+                        let isSnowing = checkSnow();
+                        if(isRaining) {
+                            callMrPickleworth();
+                        } else if (isSnowing) {
+                            callTaxi();
+                        } else {
+                            callMrsBloomington();
+                        }
+                    </code></pre>
+            </section>
+            <section>
+                <p>Guess what? it can go on and on ...</p>
+                <pre class="fragment"><code data-trim>
+                            if(condition) {
+                                ...
+                            } else if (condition) {
+                                ...
+                            } else if (condition) {
+                                ...
+                            } else if (condition) {
+                                ...
+                            } else if (condition) {
+                                ...
+                            } else if (condition) {
+                                ...
+                            } else {
+                                ...
+                            }
+                        </code></pre>
+
+            </section>
+            <section>
+                <h3>Exercise</h3>
+                <p>Rewrite the execiese of the shipping fee function with several else-ifs</p>
+            </section>
+            <section>
+                <h3>Homework prep:</h3>
                 <ul>
-                    <li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
-                    <li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS (book series)</a> - start with book 1</li>
+                    <li>Write a function that takes 2 numbers as argument and sort the two numbers from largest to smallest.</li>
+                    <li>Display an alert box to show the result.</li>
+                    <li>Sample numbers : 2, 5 </li>
+                    <li> Output : 5, 2</li>
+                    <li>
+                        <pre><code data-trim>
+                                    function sortNumbers(x,y) {
+                                        ...
+                                    }
+                                    console.log(sortNumbers(2,5)) //print out "5,2"
+                                    console.log(sortNumbers(8,1000)) //print out "100,8"
+                                    console.log(sortNumbers(0,22)) //print out "22,0"
+                                </code>
+                                </pre>
+                    </li>
                 </ul>
             </section>
-
-
-
-            <!-- Starting from here, this is Giulio's lesson 3 material that was not covered -->
+            <section>
+                <h3>Homework: else-ifs</h3>
+                <ul>
+                    <li>Write a function that takes 3 numbers as argument and sort the three numbers from largest to smallest.</li>
+                    <li>Display an alert box to show the result.</li>
+                    <li>Sample numbers : 5, 2 , 9 </li>
+                    <li>Output : 9, 5, 2</li>
+                    <li>
+                        <pre><code data-trim>
+                            function sortNumbers(x,y,z) {
+                                ...
+                            }
+                            console.log(sortNumbers(2,5,9)) //print out "9,5,2"
+                            console.log(sortNumbers(8,100,2)) //print out "100,8,2"
+                            console.log(sortNumbers(192,0,84)) //print out "192,84,0"
+                        </code>
+                        </pre>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <pre><code data-trim>
+                        function sortNumbers(x, y, z) {
+                            if (x > y && x > z) {
+                                if (y > z) {
+                                    alert(x + ", " + y + ", " + z);
+                                }
+                                else {
+                                    alert(x + ", " + z + ", " + y);
+                                }
+                            }
+                            else if (y > x && y > z) {
+                                if (x > z) {
+                                    alert(y + ", " + x + ", " + z);
+                                }
+                                else {
+                                    alert(y + ", " + z + ", " + x);
+                                }
+                            }
+                            else if (z > x && z > y) {
+                                if (x > y) {
+                                    alert(z + ", " + x + ", " + y);
+                                }
+                                else {
+                                    alert(z + ", " + y + ", " + x);
+                                }
+                            }
+                        }
+                        sortNumbers(5, 2, 9)
+                        sortNumbers(8, 1000, 2)
+                        sortNumbers(0, 22, 192)
+                </code>
+                </pre>
+            </section>
 
             <section>
                 <h2>Recap:</h2>
-                <h1>what FOR loop</h1>
-                <p>The <code data-trim>for</code> loop is the most often used one.</p>
+                <h1>What is a <b>FOR</b> loop?</h1>
+                <p>The <code data-trim>for</code> loop is the most often used kind of loop.</p>
 
                 <p class="fragment">example</p>
                 <pre class="fragment"><code data-trim>
@@ -126,79 +415,116 @@
                         alert(i);
                     }
                 </code></pre>
-
             </section>
-
             <section>
-                <h3>Dive in:</h3>
+                <h3>Exercise: for-loop</h3>
                 <ul>
-                    <li>Code a function named <span class="emphasis">MultiplicationTable</span></li>
-                    <li>Takes 1 argument</li>
-                    <li>and print the multiplication table for that number</li>
-                    <li>e.g. 2x1=2 2x2=4 2x3=6 2x4=8 etc... until 2x10=20</li>
+                    <li>Code a function named <span class="emphasis">printMultiplicationTable</span></li>
+                    <li>Takes 1 argument and print the multiplication table for that number in the console log</li>
+                    <li>e.g. 2x1=2<br>2x2=4<br>2x3=6<br>etc... until 2x10=20</li>
+                    <li>Remember to use <code>console.log("xxxxx")</code></li>
                     <li>Don't forget to make the function call.</li>
                 </ul>
+            </section>
+            <section>
+                <img src="assets/MultiplicationTableLog.png" style="height:75%">
+            </section>
+            <section>
+                <h3>One possible answer</h3>
                 <pre class="fragment"><code data-trim>
-                    function MultiplicationTable(int1) {
-                        console.log("MultiplicationTable of: " + int1)
+                    function printMultiplicationTable(number) {
+                        console.log("MultiplicationTable of: " + number)
                         for (let j = 1; j <= 10; j++) {
-                            console.log(int1 + " x " + j + " = " + (int1 * j));
+                            console.log(number + " x " + j + " = " + (number * j));
                         }
                     }
-                    MultiplicationTable(2);
+                    printMultiplicationTable(2);
 					</code></pre>
             </section>
-
             <section>
-                <p>another option is </p>
-                <h1 class="fragment">The "while" loop</h1>
+                <p>Another kind of loop </p>
+                <h3 class="fragment">The "while" loop</h3>
             </section>
-
-
             <section>
-                <p>While the <code data-trim>condition</code> is <code data-trim>true</code>, the <code data-trim>code</code> from the loop body is executed.</p>
+                <p>While the <code data-trim>condition</code> is <code data-trim>true</code>, the <code data-trim>code</code>                    from
+                    the loop body is executed.</p>
                 <p class="fragment">the syntax is</p>
                 <pre class="fragment"><code data-trim>
-	while (condition) {
-		// code
-		// so-called "loop body"
-	}</code></pre>
-
-
+                    while (condition) {
+                        // code
+                        // so-called "loop body"
+                    }</code></pre>
                 <p class="fragment">let's try it!</p>
                 <pre class="fragment"><code data-trim>
-	let i = 0;
-	while (i < 3) { // shows 0, then 1, then 2
-		alert( i );
-		i++;
-	}</code></pre>
-
+                    let i = 0;
+                    while (i < 3) { // shows 0, then 1, then 2
+                        alert( i );
+                        i++;
+                    }</code></pre>
             </section>
-
             <section>
-                <h3>Dive in:</h3>
+                <h3>Exercise: while-loop</h3>
                 <ul>
-                    <li>Code a function named <span class="emphasis">BigNumber</span></li>
-                    <li>keep asking/promt to the user to insert a number</li>
-                    <li>only if the number is bigger than 1000 stop asking</li>
-                    <li>otherwise promt again the question</li>
+                    <li>Code a function named <span class="emphasis">getBigNumber</span></li>
+                    <li>keep promting the user to type in a number</li>
+                    <li>only stop asking if the number is bigger than 1000</li>
+                    <li>otherwise promt the user again</li>
                 </ul>
                 <pre class="fragment"><code data-trim>
-	function BigNumber() {
-		let number = 0;
-		while (number < 1000) {
-			number = prompt("Give me a number");
-			console.log("Received number: " + number);
+                    function getBigNumber() {
+                        let number = 0;
+                        while (number < 1000) {
+                            number = prompt("Give me a number");
+                            console.log("Received number: " + number);
+                        }
+                        alert(number+ " is bigger than 1000")
+                    }
+                    getBigNumber();
+                </code></pre>
+            </section>
+            <section>
+                <h3>Exercise: while-loop</h3>
+                <p>Rewrite the execiese of printMultiplicationTable with a while-loop</p>
+            </section>
+            <section>
+                <h3>Homework 1: Summation</h3>
+                <ul>
+                    <li>Write a function summation(n) that takes a single argument n, and computes the sum of all integers
+                        up to n starting from 0</li>
+                    <li>For example: summation(3) -> 1 + 2 + 3 = 6</li>
+                    <li>For example: summation(8) -> 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36</li>
+                    <li>Use while-loop</li>
+                    <pre><code data-trim>
+                        function summation(n){
+                            ...
+                        }
+                        alert(summation(3))
+                        alert(summation(8))
+                    </code></pre>
 
-		}
-		alert(number+ " is bigger than 1000")
-	}
-	BigNumber();
-
-						</code></pre>
+            </section>
+            <section>
+                <h3>Homework 2: Draw a triangle</h3>
+                <p>Write a function that constructs the following pattern in the console.log, using a nested for loop. </p>
+                <pre><code data-trim>
+                    *  
+                    * *  
+                    * * *  
+                    * * * *  
+                    * * * * * 
+                </code></pre>
+            </section>
+            <section>
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
+                    <li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS (book series)</a> - start
+                        with book 1</li>
+                </ul>
             </section>
 
 
+            <!-- REMOVED The do...while loop 
             <section>
                 <p>another option is </p>
                 <h1 class="fragment">The "do ... while" loop</h1>
@@ -206,7 +532,8 @@
 
 
             <section>
-                <p>The loop will first execute the body, then check the condition and, while it’s truthy, execute it again and again.</p>
+                <p>The loop will first execute the body, then check the condition and, while it’s truthy, execute it again
+                    and again.</p>
                 <p class="fragment">the syntax is</p>
                 <pre class="fragment"><code data-trim>
 	do {
@@ -250,7 +577,6 @@
 	BigNumber2();</code></pre>
             </section>
 
-
             <section>
                 <h3>Homework</h3>
                 <div class="fragment">
@@ -258,8 +584,8 @@
                     <p>ask/prompt to the user "How old are you?"</p>
                 </div>
                 <div class="fragment">
-                    <p>add an alert message when the user have 18 years old</p>
-                    <i>e.g. "Hi Giulio, in 2004 you had 18 years old"</i>
+                    <p>add an alert message to show the year when the user was/is 18 years old</p>
+                    <i>e.g. "Hi Giulio, in 2004 you were 18 years old"</i>
 
                 </div>
                 <div class="fragment">
@@ -269,7 +595,7 @@
                 </div>
                 <p class="fragment">PLEASE use the <code data-trim>for/while</code> loop</p>
             </section>
-
+        -->
 
         </div>
     </div>
@@ -284,15 +610,15 @@
             dependencies: [{
                 src: '../../reveal.js/plugin/highlight/highlight.js',
                 async: true,
-                callback: function() {
+                callback: function () {
                     hljs.initHighlightingOnLoad();
                 }
-            }, ]
+            },]
         });
 
         // Make each code example executable by clicking it:
-        $(document).ready(function() {
-            $('code').click(function(event) {
+        $(document).ready(function () {
+            $('code').click(function (event) {
                 eval($(this).text());
             });
         });

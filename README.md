@@ -28,8 +28,7 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - [Quiz](https://redi-school.github.io/js-munich-2018-fall/quizes/quiz1/)
 - Boolean values
 
-## Lesson 6
-- list
-- Object
-- let's put all together
+## [Lesson 6](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson6/)
+- Review boolean if, else, for, while
+- Logical operators
 

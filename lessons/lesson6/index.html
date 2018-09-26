@@ -78,7 +78,7 @@
                         Can you name all the comparison operators?
                     </li>
                     <li class="fragment">
-                        What is the result of the comparison?
+                        What is the result of an comparison?
                     </li>
                     <li class="fragment">
                         Hint: B??????
@@ -93,20 +93,19 @@
             </section>
 
             <section>
-                A quick recap:
-                <h3>Review</h3>
+                <h3>A quick recap:</h3>
                 <ul>
                     <li class="fragment">
                         In Boolean logic, a statement can be either <i>true</i> or <i>false</i>
                     </li>
                     <li class="fragment">
-                        It rains today.
+                        For example: "It rains today".
                     </li>
                     <li class="fragment">
-                        In javascript:
+                        In JS:
                         <pre><code data-trim>
-                            if (x==4) {
-                                do_something
+                            if (x === 4) {
+                                doSomething();
                             }
                         </code></pre>
                     </li>
@@ -122,10 +121,10 @@
                     <li class="fragment">It rains today AND my feet are getting wet</li>
                     <li class="fragment">It rains today OR my feet are getting wet</li>
                     <li class="fragment">
-                        In javascript:
+                        In JS:
                         <pre><code data-trim>
-                            if (x == 4 || y > 0) {
-                                do_something;
+                            if (x === 4 || y > 0) {
+                                doSomething();
                             }
                         </code></pre>
                     </li>
@@ -133,22 +132,22 @@
             </section>
             <section>
                 <ul>
-                    <li class="fragment">Often we need to express more complex logic than <br> x > y</li>
+                    <li>Often we need to express more complex logic than <br> x > y</li>
                     <li class="fragment">We need to combine conditions together</li>
                     <li class="fragment">AND: &&
                         <ul>
-                            <li>Example: (x==4 && y==1)</li>
+                            <li>Example: (x === 4 && y >= 1)</li>
                         </ul>
                     </li>
 
                     <li class="fragment">OR: ||
                         <ul>
-                            <li>Example: (x==4 || y==1)</li>
+                            <li>Example: (x === 4 || y >= 1)</li>
                         </ul>
                     </li>
                     <li class="fragment">NOT: !
                         <ul>
-                            <li>Example: (x==4 && !(y==1))</li>
+                            <li>Example: (x === 4 && !(y >= 1))</li>
                         </ul>
                     </li>
                 </ul>
@@ -159,10 +158,12 @@
                     <li>When the first expression AND the second expression both evaluate to <span class="emphasis">true</span></li>
                     <li class="fragment">Example:
                         <pre><code data-trim>
-                            let x = 4; let y = 1;
-                            alert(x==4 && y==1); 
-                            alert(x==3 && y==1);
-                            alert(x==1 && y==0);
+                            let x = 4;
+                            let y = 1;
+
+                            alert(x === 4 && y === 1);
+                            alert(x === 3 && y === 1);
+                            alert(x === 1 && y === 0);
                          </code></pre>
                     </li>
                 </ul>
@@ -173,10 +174,12 @@
                     <li>When either the first expression OR the second expression both evaluate to <span class="emphasis">true</span></li>
                     <li class="fragment">Example:
                         <pre><code data-trim>
-                            let x = 4; let y = 1;
-                            alert(x==4 || y==1); 
-                            alert(x==3 || y==1);
-                            alert(x==1 || y==0);
+                            let x = 4;
+                            let y = 1;
+
+                            alert(x === 4 || y === 1);
+                            alert(x === 3 || y === 1);
+                            alert(x === 1 || y === 0);
                         </code></pre>
                     </li>
                 </ul>
@@ -189,11 +192,13 @@
                         it negates the result.</li>
                     <li class="fragment">Example:
                         <pre><code data-trim>
-                            let x = 4; let y = 1;
-                            alert(x==4 && !(y==1)); 
-                            alert(x==3 && !(y==1));
-                            alert(x==1 && !(y==0));
-                            alert(x==4 && !(y==0));
+                            let x = 4;
+                            let y = 1;
+
+                            alert(x === 4 && !(y === 1));
+                            alert(x === 3 && !(y === 1));
+                            alert(x === 1 && !(y === 0));
+                            alert(x === 4 && !(y === 0));
                         </code></pre>
                     </li>
                 </ul>
@@ -221,8 +226,8 @@
                 <ul>
                     <li class="fragment">
                         <pre><code data-trim>
-                            if (x==4 && (!(y==1) || z==0)) {   
-                                do_something;
+                            if (x === 4 && (!(y === 1) || z === 0)) {
+                                doSomething();
                             }
                         </code></pre>
                     </li>
@@ -230,19 +235,19 @@
                         What is the result?
                         <pre><code data-trim>
                             let x = 3; let y = 9; let z = 9
-                            alert(y >= x || (x===y && y > z));
+                            alert(y >= x || (x === y && y > z));
                         </code></pre>
                     </li>
                     <li class="fragment">
                         <pre><code data-trim>
                             let x = 3; let y = 9; let z = 9
-                            alert((y >=x && y < z) && !(x===y && y > z));
+                            alert((y >= x && y < z) && !(x === y && y > z));
                         </code></pre>
                     </li>
                     <li class="fragment">
                         <pre><code data-trim>
                             let x = 3; let y = 9; let z = 9
-                            alert((y === x || y === z) && !(x===y && y > z));
+                            alert((y === x || y === z) && !(x === y && y > z));
                         </code></pre>
                     </li>
                 </ul>
@@ -251,7 +256,7 @@
             <section>
                 <h3>Exercise</h3>
                 <ul>
-                    <li>Rewrite the function from previous exercise using a <strong>single</strong> condition</li>
+                    <li>Rewrite the function from the previous exercise using a <strong>single</strong> condition</li>
                     <li class="fragment">
                         Remember the conditionals are:
                     </li>
@@ -266,7 +271,7 @@
                 </ul>
             </section>
             <section>
-                <h3>Exercise: complex conditionals</h3>
+                <h3>Exercise: Complex conditionals</h3>
                 <p class="emphasis">Build a function that calculates shipping fee for an order and return it.</p>
                 <ul>
                     <li>Argument: order amount in EUR</li>
@@ -326,43 +331,43 @@
             </section>
             <section>
                 <h3>Exercise</h3>
-                <p>Rewrite the execiese of the shipping fee function with several else-ifs</p>
+                <p>Rewrite the exercise of the shipping fee function with several else-ifs</p>
             </section>
             <section>
                 <h3>Homework prep:</h3>
+                <p>Write a function, that:</p>
                 <ul>
-                    <li>Write a function that takes 2 numbers as argument and sort the two numbers from largest to smallest.</li>
-                    <li>Display an alert box to show the result.</li>
-                    <li>Sample numbers : 2, 5 </li>
-                    <li> Output : 5, 2</li>
+                    <li>Takes 2 numbers as arguments</li>
+                    <li>Prints them to the console, ordered from largest to smallest</li>
+                    <li>For example: 2, 5 becomes 5, 2</li>
                     <li>
                         <pre><code data-trim>
-                                    function sortNumbers(x,y) {
-                                        ...
-                                    }
-                                    console.log(sortNumbers(2,5)) //print out "5,2"
-                                    console.log(sortNumbers(8,1000)) //print out "100,8"
-                                    console.log(sortNumbers(0,22)) //print out "22,0"
-                                </code>
-                                </pre>
+                            function sortNumbers(x, y) {
+                                ...
+                                console.log(...);
+                            }
+                            sortNumbers(2, 5);    // prints out "5, 2"
+                            sortNumbers(8, 1000); // prints out "1000, 8"
+                            sortNumbers(22, 1);   // prints out "22, 1"
+                        </code></pre>
                     </li>
                 </ul>
             </section>
             <section>
                 <h3>Homework: else-ifs</h3>
+                <p>Now do the same with <b>three</b> numbers!</p>
                 <ul>
-                    <li>Write a function that takes 3 numbers as argument and sort the three numbers from largest to smallest.</li>
-                    <li>Display an alert box to show the result.</li>
-                    <li>Sample numbers : 5, 2 , 9 </li>
-                    <li>Output : 9, 5, 2</li>
+                    <li>Add one more argument to your function</li>
+                    <li>Order all three into the right order</li>
+                    <li>For example: 5, 2, 9 becomes 9, 5, 2</li>
                     <li>
                         <pre><code data-trim>
-                            function sortNumbers(x,y,z) {
+                            function sortNumbers(x, y, z) {
                                 ...
                             }
-                            console.log(sortNumbers(2,5,9)) //print out "9,5,2"
-                            console.log(sortNumbers(8,100,2)) //print out "100,8,2"
-                            console.log(sortNumbers(192,0,84)) //print out "192,84,0"
+                            sortNumbers(2, 5, 9);    // prints out "9, 5, 2"
+                            sortNumbers(8, 100, 2);  // prints out "100, 8, 2"
+                            sortNumbers(192, 0, 84); // prints out "192, 84, 0"
                         </code>
                         </pre>
                     </li>
@@ -370,35 +375,35 @@
             </section>
             <section>
                 <pre><code data-trim>
-                        function sortNumbers(x, y, z) {
-                            if (x > y && x > z) {
-                                if (y > z) {
-                                    alert(x + ", " + y + ", " + z);
-                                }
-                                else {
-                                    alert(x + ", " + z + ", " + y);
-                                }
+                    function sortNumbers(x, y, z) {
+                        if (x > y && x > z) {
+                            if (y > z) {
+                                console.log(x + ", " + y + ", " + z);
                             }
-                            else if (y > x && y > z) {
-                                if (x > z) {
-                                    alert(y + ", " + x + ", " + z);
-                                }
-                                else {
-                                    alert(y + ", " + z + ", " + x);
-                                }
-                            }
-                            else if (z > x && z > y) {
-                                if (x > y) {
-                                    alert(z + ", " + x + ", " + y);
-                                }
-                                else {
-                                    alert(z + ", " + y + ", " + x);
-                                }
+                            else {
+                                console.log(x + ", " + z + ", " + y);
                             }
                         }
-                        sortNumbers(5, 2, 9)
-                        sortNumbers(8, 1000, 2)
-                        sortNumbers(0, 22, 192)
+                        else if (y > x && y > z) {
+                            if (x > z) {
+                                console.log(y + ", " + x + ", " + z);
+                            }
+                            else {
+                                console.log(y + ", " + z + ", " + x);
+                            }
+                        }
+                        else if (z > x && z > y) {
+                            if (x > y) {
+                                console.log(z + ", " + x + ", " + y);
+                            }
+                            else {
+                                console.log(z + ", " + y + ", " + x);
+                            }
+                        }
+                    }
+                    sortNumbers(5, 2, 9);
+                    sortNumbers(8, 1000, 2);
+                    sortNumbers(0, 22, 192);
                 </code>
                 </pre>
             </section>
@@ -507,11 +512,11 @@
                 <h3>Homework 2: Draw a triangle</h3>
                 <p>Write a function that constructs the following pattern in the console.log, using a nested for loop. </p>
                 <pre><code data-trim>
-                    *  
-                    * *  
-                    * * *  
-                    * * * *  
-                    * * * * * 
+                    *
+                    * *
+                    * * *
+                    * * * *
+                    * * * * *
                 </code></pre>
             </section>
             <section>
@@ -524,7 +529,7 @@
             </section>
 
 
-            <!-- REMOVED The do...while loop 
+            <!-- REMOVED The do...while loop
             <section>
                 <p>another option is </p>
                 <h1 class="fragment">The "do ... while" loop</h1>

@@ -16,7 +16,7 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 ## [Lesson 3](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson3/)
 - Review of `function` with also `return`
 - The `if` statement
-- how to comment 
+- how to comment
 - using `console.log("hello");`
 
 ## [Lesson 4](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson4/)
@@ -27,10 +27,9 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Debugging
 - [Quiz](https://redi-school.github.io/js-munich-2018-fall/quizes/quiz1/)
 - Boolean values
-- Logical operators
 
 ## Lesson 6
 - list
 - Object
 - let's put all together
- 
+

@@ -29,6 +29,8 @@ This repo contains teaching material and assignments for ReDI School in Munich J
 - Boolean values
 
 ## [Lesson 6](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson6/)
-- Review boolean if, else, for, while
+- Review boolean if, else
 - Logical operators
 
+## [Lesson 7](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson7/)
+- Review boolean logical operators, for, while

@@ -60,7 +60,7 @@
             </section>
 
             <section>
-                <h3>Homework from last lesson:</h3>
+                <h3>Homework 5.1 from last lesson:</h3>
                 <p class="emphasis">Build a function that compares positive numbers</p>
                 <ul>
                     <li>Takes two numbers as arguments</li>
@@ -254,7 +254,7 @@
             </section>
 
             <section>
-                <h3>Exercise</h3>
+                <h3>Exercise: 6.1 Complex conditionals</h3>
                 <ul>
                     <li>Rewrite the function from the previous exercise using a <strong>single</strong> condition</li>
                     <li class="fragment">
@@ -262,8 +262,8 @@
                     </li>
                     <li class="fragment">
                         <pre><code>x === y</code></pre> -- return true if the two numbers are equals
-                        <pre><code>x > 0</code></pre> -- but only if both numbers are positive
-                        <pre><code>y > 0</code></pre>
+                        <pre><code>x >= 0</code></pre> -- but only if both numbers are positive
+                        <pre><code>y >= 0</code></pre>
                     </li>
                     <li class="fragment">
                         Hint: You need to combine them with &&, || or !
@@ -271,7 +271,7 @@
                 </ul>
             </section>
             <section>
-                <h3>Exercise: Complex conditionals</h3>
+                <h3>Exercise: 6.2 Complex conditionals</h3>
                 <p class="emphasis">Build a function that calculates shipping fee for an order and return it.</p>
                 <ul>
                     <li>Argument: order amount in EUR</li>
@@ -330,11 +330,7 @@
 
             </section>
             <section>
-                <h3>Exercise</h3>
-                <p>Rewrite the exercise of the shipping fee function with several else-ifs</p>
-            </section>
-            <section>
-                <h3>Homework prep:</h3>
+                <h3>Homework 3.6 Prep:</h3>
                 <p>Write a function, that:</p>
                 <ul>
                     <li>Takes 2 numbers as arguments</li>
@@ -353,7 +349,7 @@
                 </ul>
             </section>
             <section>
-                <h3>Homework: else-ifs</h3>
+                <h3>Homework 6.4: else-ifs</h3>
                 <p>Now do the same with <b>three</b> numbers!</p>
                 <ul>
                     <li>Add one more argument to your function</li>
@@ -366,258 +362,12 @@
                             }
                             sortNumbers(2, 5, 9);    // prints out "9, 5, 2"
                             sortNumbers(8, 100, 2);  // prints out "100, 8, 2"
-                            sortNumbers(192, 0, 84); // prints out "192, 84, 0"
-                        </code>
-                        </pre>
+                            sortNumbers(192, 0, 84); // prints out "192, 84, 0" 
+                        </code></pre>
                     </li>
+                    <li>BONUS: Rewrite the function with switch statements. Look it up!</li>
                 </ul>
             </section>
-            <section>
-                <pre><code data-trim>
-                    function sortNumbers(x, y, z) {
-                        if (x > y && x > z) {
-                            if (y > z) {
-                                alert(x + ", " + y + ", " + z);
-                            }
-                            else {
-                                alert(x + ", " + z + ", " + y);
-                            }
-                        }
-                        else if (y > x && y > z) {
-                            if (x > z) {
-                                alert(y + ", " + x + ", " + z);
-                            }
-                            else {
-                                alert(y + ", " + z + ", " + x);
-                            }
-                        }
-                        else if (z > x && z > y) {
-                            if (x > y) {
-                                alert(z + ", " + x + ", " + y);
-                            }
-                            else {
-                                alert(z + ", " + y + ", " + x);
-                            }
-                        }
-                    }
-                    sortNumbers(5, 2, 9);
-                    sortNumbers(8, 1000, 2);
-                    sortNumbers(0, 22, 192);
-                </code>
-                </pre>
-            </section>
-
-            <section>
-                <h2>Recap:</h2>
-                <h1>What is a <b>FOR</b> loop?</h1>
-                <p class="fragment">The <code data-trim>for</code> loop is the kind of loop used the most.</p>
-
-                <p class="fragment">Example:</p>
-                <pre class="fragment"><code data-trim>
-                    for (let i = 0; i < 3; i++) {
-                        // shows 0, then 1, then 2
-                        alert(i);
-                    }
-                </code></pre>
-            </section>
-            <section>
-                <h3>Exercise: for-loop</h3>
-                <ul>
-                    <li>Code a function named <span class="emphasis">printMultiplicationTable</span></li>
-                    <li>Takes 1 argument and prints the multiplication table for that number in the console log</li>
-                    <li>e.g. 2x1=2<br>2x2=4<br>2x3=6<br>etc... until 2x10=20</li>
-                    <li>Remember to use <code>console.log("xxxxx")</code></li>
-                    <li>Don't forget to make the function call.</li>
-                </ul>
-            </section>
-            <section>
-                <img src="assets/MultiplicationTableLog.png" style="height:75%">
-            </section>
-            <section>
-                <h3>One way to do it</h3>
-                <pre class="fragment"><code data-trim>
-                    function printMultiplicationTable(number) {
-                        console.log("MultiplicationTable of: " + number)
-                        for (let j = 1; j <= 10; j++) {
-                            console.log(number + " x " + j + " = " + (number * j));
-                        }
-                    }
-                    printMultiplicationTable(2);
-					</code></pre>
-            </section>
-            <section>
-                <p>Another kind of loop </p>
-                <h3 class="fragment">The "while" loop</h3>
-            </section>
-            <section>
-                <p>While the <code data-trim>condition</code> is <code data-trim>true</code>, the <code data-trim>code</code>                    from the loop body is repeated.</p>
-                <p class="fragment">The syntax is:</p>
-                <pre class="fragment"><code data-trim>
-                    while (condition) {
-                        // code
-                        // so-called "loop body"
-                    }
-                </code></pre>
-                <p class="fragment">Let's try it!</p>
-                <pre class="fragment"><code data-trim>
-                    let i = 0;
-                    while (i < 3) { // shows 0, then 1, then 2
-                        alert(i);
-                        i++;
-                    }
-                </code></pre>
-            </section>
-            <section>
-                <p>A more common example</p>
-                <pre class="fragment"><code data-trim>
-                    function game(player1, player2) {
-                        let isRunning = true;
-
-                        while(isRunning) {
-                            updateGame();
-                            drawGame();
-                            if (didSomeoneWin()) {
-                                isRunning = false;
-                            }
-                        }
-                    }
-                </code></pre>
-            </section>
-            <section>
-                <h3>Exercise: while-loop</h3>
-                <ul>
-                    <li>Code a function named <span class="emphasis">getBigNumber</span></li>
-                    <li>Keep prompting the user to type in a number</li>
-                    <li>Only stop asking if the number is bigger than 1000</li>
-                    <li>Otherwise prompt the user again</li>
-                </ul>
-                <pre class="fragment"><code data-trim>
-                    function getBigNumber() {
-                        let number = 0;
-                        while (number < 1000) {
-                            number = prompt("Give me a number");
-                            console.log("Received number: " + number);
-                        }
-                        alert(number + " is bigger than 1000")
-                    }
-                    getBigNumber();
-                </code></pre>
-            </section>
-            <section>
-                <h3>Exercise: while-loop</h3>
-                <p>Rewrite the exercise of printMultiplicationTable with a while-loop</p>
-            </section>
-            <section>
-                <h3>Homework 1: Summation</h3>
-                <ul>
-                    <li>Write a function summation(n) that takes a single argument n, and computes the sum of all integers
-                        up to n starting from 0</li>
-                    <li>For example: summation(3) -> 1 + 2 + 3 = 6</li>
-                    <li>Or: summation(7) -> 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28</li>
-                    <li>Use while-loop</li>
-                    <pre><code data-trim>
-                        function summation(n){
-                            ...
-                        }
-                        alert(summation(3))
-                        alert(summation(7))
-                    </code></pre>
-
-            </section>
-            <section>
-                <h3>Homework 2: Draw a triangle</h3>
-                <p>Write a function that constructs the following pattern in the console.log, using a nested for loop. </p>
-                <pre><code data-trim>
-                    *
-                    * *
-                    * * *
-                    * * * *
-                    * * * * *
-                </code></pre>
-            </section>
-            <section>
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
-                    <li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS (book series)</a> - start
-                        with book 1</li>
-                </ul>
-            </section>
-
-
-            <!-- REMOVED The do...while loop
-            <section>
-                <p>another option is </p>
-                <h1 class="fragment">The "do ... while" loop</h1>
-            </section>
-
-
-            <section>
-                <p>The loop will first execute the body, then check the condition and, while it’s truthy, execute it again
-                    and again.</p>
-                <p class="fragment">the syntax is</p>
-                <pre class="fragment"><code data-trim>
-	do {
-		// loop body
-	} while (condition);</code></pre>
-
-
-                <p class="fragment">let's try it!</p>
-                <pre class="fragment"><code data-trim>
-	let i = 0;
-	do {
-		alert( i );
-		i++;
-	} while (i < 3);</code></pre>
-
-            </section>
-
-            <section>
-                <p>This form of syntax is rarely used</p>
-                <p>Usually, the other form is preferred: <code data-trim>while(…) {…}</code>.</p>
-            </section>
-
-            <section>
-                <h3>Dive in:</h3>
-                <ul>
-                    <li>Code a function named <span class="emphasis">BigNumber2</span></li>
-                    <li>keep asking/promt to the user to insert a number</li>
-                    <li>only if the number is bigger than 1000 stop asking</li>
-                    <li>otherwise promt again the question (please use do/while)</li>
-
-                </ul>
-                <pre class="fragment"><code data-trim>
-	function BigNumber2() {
-		let number = 0;
-		do {
-			number = prompt("Give me a number");
-			console.log("Received number: " + number);
-		} while (number < 1000);
-		alert(number+ " is bigger than 1000")
-	}
-	BigNumber2();</code></pre>
-            </section>
-
-            <section>
-                <h3>Homework</h3>
-                <div class="fragment">
-                    <p>ask/prompt to the user "What's your Name?"</p>
-                    <p>ask/prompt to the user "How old are you?"</p>
-                </div>
-                <div class="fragment">
-                    <p>add an alert message to show the year when the user was/is 18 years old</p>
-                    <i>e.g. "Hi Giulio, in 2004 you were 18 years old"</i>
-
-                </div>
-                <div class="fragment">
-                    <p>add alert message only if the user is older than 30</p>
-                    <i>e.g. "Hi Giulio, in xxxx you have more than 30 years old"</i>
-
-                </div>
-                <p class="fragment">PLEASE use the <code data-trim>for/while</code> loop</p>
-            </section>
-        -->
-
         </div>
     </div>
 

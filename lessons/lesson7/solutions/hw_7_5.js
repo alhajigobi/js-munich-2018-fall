@@ -1,3 +1,18 @@
+/*
+Homework 7.5: Draw a triangle
+Write a function that constructs the following pattern in the console.log, 
+using a nested for loop.
+
+    *
+    * *
+    * * *
+    * * * *
+    * * * * *
+
+Bonus: Add an argument x to the function, and contruct a triangle with x levels.
+Bonus Bonus: Rewrite the function with while-loops
+*/
+
 let x, y, chr;
 function drawStars() {
     for (x = 1; x <= 6; x++) {
@@ -8,34 +23,6 @@ function drawStars() {
         console.log(chr);
     }
 }
+
 drawStars()
 
-function sortNumbers(x, y, z) {
-    if (x > y && x > z) {
-        if (y > z) {
-            alert(x + ", " + y + ", " + z);
-        }
-        else {
-            alert(x + ", " + z + ", " + y);
-        }
-    }
-    else if (y > x && y > z) {
-        if (x > z) {
-            alert(y + ", " + x + ", " + z);
-        }
-        else {
-            alert(y + ", " + z + ", " + x);
-        }
-    }
-    else if (z > x && z > y) {
-        if (x > y) {
-            alert(z + ", " + x + ", " + y);
-        }
-        else {
-            alert(z + ", " + y + ", " + x);
-        }
-    }
-}
-sortNumbers(5, 2, 9)
-sortNumbers(8, 1000, 2)
-sortNumbers(0, 22, 192)

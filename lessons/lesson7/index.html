@@ -111,14 +111,11 @@
                 </ul>
             </section>
 
-            <section>
 
-            </section>
             <section>
                 <h2>Review:</h2>
                 <h1>What is a <b>FOR</b> loop?</h1>
                 <p class="fragment">The <code data-trim>for</code> loop is the kind of loop used the most.</p>
-
                 <p class="fragment">Example:</p>
                 <pre class="fragment"><code data-trim>
                     for (let i = 0; i < 3; i++) {
@@ -126,6 +123,59 @@
                         alert(i);
                     }
                 </code></pre>
+            </section>
+            <section>
+                <img src="assets/for-loop-fig.png" style="">
+            </section>
+            <section>
+                <h3>Starting condition</h3>
+                <pre><code data-trim>
+                    for (let i = 0; i < 3; i++) {
+                        // shows 0, then 1, then 2
+                        alert(i);
+                    }
+                </code></pre>
+                <ul>
+                    <li class="fragment"> In the example. The start condition is i = 0.</li>
+                    <li class="fragment">Traditionally we use 1 letter symbol for the variable.</li>
+                    <li class="fragment">Why 0 ?</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Terminating condition</h3>
+                <pre><code data-trim>
+                        for (let i = 0; i < 3; i++) {
+                            // shows 0, then 1, then 2
+                            alert(i);
+                        }
+                    </code></pre>
+                <ul>
+                    <li class="fragment"> Aka Are we done yet? </li>
+                    <li class="fragment">Fancy way to say how long to loop for</li>
+                    <li class="fragment">a conditional: ture or false</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Reaching the end</h3>
+                <pre><code data-trim>
+                            for (let i = 0; i < 3; i++) {
+                                // shows 0, then 1, then 2
+                                alert(i);
+                            }
+                        </code></pre>
+                <ul>
+                    <li class="fragment">We need a false to break the loop. </li>
+                    <li class="fragment">Final reason to tell us how to go from starting point to terminating point.</li>
+                    <li class="fragment">++ means to add 1 each time the loop runs</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Exercise 7.0: for-loop</h3>
+                <ul>
+                    <li>Code a function saySomething() to say hello once in the browser.</li>
+                    <li>Then create another function run() with a for-loop that calls saySomething() 10 times.</li>
+                    <li>Use document.writeln() write in the browser</li>
+                </ul>
             </section>
             <section>
                 <h3>Exercise 7.1: for-loop</h3>

@@ -125,10 +125,14 @@
                 </code></pre>
             </section>
             <section>
-                <img src="assets/for-loop-fig.png" style="">
+                <pre><code data-trim>
+                    for (begin; condition; step) {
+                        // loop body
+                    }
+                </code></pre>
             </section>
             <section>
-                <h3>Starting condition</h3>
+                <h3>Initialization</h3>
                 <pre><code data-trim>
                     for (let i = 0; i < 3; i++) {
                         // shows 0, then 1, then 2
@@ -142,27 +146,27 @@
                 </ul>
             </section>
             <section>
-                <h3>Terminating condition</h3>
+                <h3>Condition</h3>
                 <pre><code data-trim>
-                        for (let i = 0; i < 3; i++) {
-                            // shows 0, then 1, then 2
-                            alert(i);
-                        }
-                    </code></pre>
+                    for (let i = 0; i < 3; i++) {
+                        // shows 0, then 1, then 2
+                        alert(i);
+                    }
+                </code></pre>
                 <ul>
-                    <li class="fragment">Aka "Are we done yet?"</li>
+                    <li class="fragment">Aka "Are we still going?"</li>
                     <li class="fragment">Fancy way to say how long to loop for</li>
-                    <li class="fragment">A conditional: true or false</li>
+                    <li class="fragment">A condition: true or false</li>
                 </ul>
             </section>
             <section>
-                <h3>Reaching the end</h3>
+                <h3>Step</h3>
                 <pre><code data-trim>
-                            for (let i = 0; i < 3; i++) {
-                                // shows 0, then 1, then 2
-                                alert(i);
-                            }
-                        </code></pre>
+                    for (let i = 0; i < 3; i++) {
+                        // shows 0, then 1, then 2
+                        alert(i);
+                    }
+                </code></pre>
                 <ul>
                     <li class="fragment">We need a false to break the loop. </li>
                     <li class="fragment">Final reason to tell us how to go from starting point to terminating point.</li>

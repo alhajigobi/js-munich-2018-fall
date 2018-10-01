@@ -6,15 +6,15 @@ Then create another function with a for-loop to say hello 10 times.
 Use document.writeln() write in the browser   
  */
 
+function saySomething() {
+    document.writeln("hello! redi <br>");
+}
+
 
 function run() {
-    // Create your for loop here
-    
+    // FIll in answer here
 }
 
-function saySomething(){
-    document.writeln("hello! ");
-}
+run();
 
-run()
 

@@ -17,11 +17,11 @@ Write a function, that:
 */
 
 function sortNumbers(x, y) {
-    if (x == y) {
+    if (x === y) {
         alert("Sorted numbers: " + x + ", " + y);
-    } else if (x > y){
+    } else if (x > y) {
         alert("Sorted numbers: " + x + ", " + y);
-    } else if (x<y){
+    } else if (x < y) {
         alert("Sorted numbers: " + y + ", " + x);
     }
 }

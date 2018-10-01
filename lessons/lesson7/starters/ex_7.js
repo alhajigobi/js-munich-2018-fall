@@ -19,10 +19,12 @@ function continueIt(){
     } 
 }
 
+
 function countDown() {
     for (let i=25; i > 0; i--){
         document.writeln("Count down " + i + "!<br>");
     } 
 }
+countDown();
 
 

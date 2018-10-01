@@ -204,6 +204,82 @@
                 <img src="assets/MultiplicationTableLog.png" style="height:75%">
             </section>
             <section>
+                <h3>Stopping a loop early</h3>
+                <ul>
+                    <li class="fragment">Sometimes you want to end your loop before it reach completion </li>
+                    <li class="fragment">
+                        <pre class="fragment"><code data-trim>
+                                for (let i=0; i<100;i++){
+                                    document.writeln(i);
+                                    if(i == 45){
+                                        break;
+                                    }
+                                } 
+                            </code></pre>
+                    </li>
+                    <li class="fragment"></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Skipping an iteration</h3>
+                <ul>
+                    <li class="fragment">Sometimes you want to skip its current iteration and move onto the next one </li>
+                    <li class="fragment">
+                        <pre class="fragment"><code data-trim>
+                                    let floors = 28;
+                                    for (let i=0; i<=floors;i++){
+                                        if(i == 13){
+                                            continue;
+                                        }
+                                        document.writeln("At floor: " + i + "<br>");
+                                    } 
+                                </code></pre>
+                    </li>
+                    <li class="fragment"></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Going backward</h3>
+                <ul>
+                    <li class="fragment">No reason why we have to start at 0 and then increment upward! </li>
+                    <li class="fragment">
+                        <pre class="fragment"><code data-trim>
+                                        for (let i=25; i > 0; i--){
+                                            document.writeln("Count down " + i + "!");
+                                        } 
+                                    </code></pre>
+                    </li>
+                    <li class="fragment"></li>
+                </ul>
+            </section>
+            <section>
+                    <h3>Exercise 7.1.b: for-loop b</h3>
+                    <ul>
+                        <li>Code a function named <span class="emphasis">printOddFloors</span></li>
+                        <li>Print out the odd floor label of a building in the broswer AND skip the 13th floor.</li>
+                        <li> <pre><code data-trim>
+                                At floor: 25
+                                At floor: 23
+                                At floor: 21
+                                At floor: 19
+                                At floor: 17
+                                At floor: 15
+                                At floor: 13 <--- skip
+                                At floor: 11
+                                At floor: 9
+                                At floor: 7
+                                At floor: 5
+                                At floor: 3
+                                At floor: 1
+                            </code></pre>
+                    </ul>
+                </section>
+                <section>
+                        <h3>Exercise 7.1.b: for-loop b continue</h3>
+                        <li>Hint look up and use the mod operator %   e.g <span class="emphasis"> i%2</span></li>
+                        <li>Don't forget to make the function call and use document.writeln</li>
+                </section>
+            <section>
                 <p>Another kind of loop </p>
                 <h3 class="fragment">The "while" loop</h3>
             </section>
@@ -242,6 +318,7 @@
                     }
                 </code></pre>
             </section>
+
             <section>
                 <h3>Exercise 7.2 : while-loop</h3>
                 <ul>
@@ -301,6 +378,9 @@
                     <li><b>Bonus 2</b>: Add an argument x to the function, and contruct a triangle with x levels.</li>
                     <li><b>Bonus 3</b>: Rewrite the function with while-loops</li>
                 </ul>
+            </section>
+            <section>
+
             </section>
         </div>
     </div>

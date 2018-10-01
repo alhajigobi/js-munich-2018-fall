@@ -19,5 +19,3 @@ alert(summation(7)); // print out 28
 alert(summation(15)); // print out 120
 alert(summation(56)); // print out 1596
 alert(summation(106)); // print out 5671
-
-

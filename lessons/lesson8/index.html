@@ -1,0 +1,324 @@
+<html>
+
+<head>
+    <title>ReDI.js 8</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <link rel="stylesheet" href="../../reveal.js/css/redi.css">
+</head>
+
+<body>
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>🚀 Lesson 8 🚀</h3>
+            </section>
+
+
+
+            <section>
+                <h3>Review 7.1.b: for-loop b</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">printOddFloors</span></li>
+                    <li>Print out the odd floor label of a building in the broswer</li>
+                    <li>AND skip the 13th floor.</li>
+                    <li> <pre><code data-trim>
+                            At floor: 25
+                            At floor: 23
+                            At floor: 21
+                            At floor: 19
+                            At floor: 17
+                            At floor: 15
+                            At floor: 11
+                            At floor: 9
+                            At floor: 7
+                            At floor: 5
+                            At floor: 3
+                            At floor: 1
+                        </code></pre>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Solution 7.1.b: for-loop b</h3>
+
+                <pre><code data-trim>
+                            function countDown() {
+                                for (let i=25; i > 0; i--){
+                                    if(i % 2 == 0){
+                                        continue;
+                                    }
+                                    document.writeln("At floor: " + i + "<br>");
+                                    //document.writeln("Count down " + i + "!<br>");
+                                } 
+                            }
+                            countDown();
+                        </code></pre>
+            </section>
+
+
+            <section>
+                <h3>Exercise 7.2 : while-loop</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">getBigNumber</span></li>
+                    <li>Keep prompting the user to type in a number</li>
+                    <li>Only stop asking if the number is bigger than 1000</li>
+                    <li>Otherwise prompt the user again</li>
+                </ul>
+                <pre class="fragment"><code data-trim>
+                    function getBigNumber() {
+                        let number = 0;
+                        while (number < 1000) {
+                            number = prompt("Give me a number");
+                            console.log("Received number: " + number);
+                        }
+                        alert(number + " is bigger than 1000")
+                    }
+                    getBigNumber();
+                </code></pre>
+            </section>
+
+
+
+
+
+            <section>
+                <h3>Introduction to arrays</h3>
+                <p>Imagine you want to create a list of all the movies you've seen this year.</p>
+                <p>One solution would be to create film variables:</p>
+                <div class="fragment">
+                    <pre><code data-trim>
+                        let film1 = "Jurassic Park";
+                        let film2 = "Titanic";
+                        let film3 = "Toy Story";
+                        // ...
+                    </code></pre>
+                </div>
+            </section>
+
+
+            <section>
+                <p>JavaScript have a special syntax to write it better</p>
+                <h1 class="fragment">ARRAY</h1>
+            </section>
+
+
+
+
+            <section>
+                <h3>Create an array</h3>
+                <p>There are two syntaxes for creating an empty arrays:</p>
+                <div class="fragment">
+                    <pre><code data-trim>
+                            let films = new Array(); ̰
+                            let films = [];
+                            </code></pre>
+                </div>
+                <div class="fragment">
+                    <p>Let's create the list of our films:</p>
+                    <pre><code data-trim>
+                            let films = ["Jurassic Park", "Titanic", "Toy Story"];
+                        </code></pre>
+                </div>
+
+            </section>
+
+
+
+            <section>
+                <h3>Identify an array's size</h3>
+                <p>The number of elements stored in a table is called its size. Here's how to access it.</p>
+                <div class="fragment">
+                    <pre><code data-trim>
+                            let films = ["Jurassic Park", "Titanic", "Toy Story"];
+    
+                            alert("array size:" + films.length);
+                            </code></pre>
+                </div>
+
+            </section>
+
+
+            <section>
+                <h3>Access an element in an array</h3>
+                <p>Each item in an array is identified by a number called its <b>index</b>.</p>
+                <p>We can represent an array as a set of boxes, each storing a specific value and associated with an index. </p>
+                <p>Here is how one might represent the <code>films</code> array:</p>
+
+                <img src="assets/indexarrays.png">
+
+            </section>
+
+            <section>
+                <h3>Access an element in an array</h3>
+                <p>You can access a particular element by passing its index to the array name within square brackets:</p>
+
+                <div class="fragment">
+                    <pre><code data-trim>
+                            let films = ["Jurassic Park", "Titanic", "Toy Story"];
+
+                            console.log(films[0]); // will be "Jurassic Park"
+                            console.log(films[1]); // will be "Titanic"
+                            console.log(films[2]); // will be "Toy Story"
+                                        </code></pre>
+                </div>
+                <div class="fragment"><img src="assets/indexarrays-console.png"></div>
+
+            </section>
+
+
+            <section>
+                <h3>Browse an array</h3>
+                <p>the best ways to browse an array element<br>is to use <code>for</code> loop.</p>
+                <div class="fragment">
+                    <pre><code data-trim>
+                                let films = ["Jurassic Park", "Titanic", "Toy Story"];
+    
+                                for (let i = 0; i < films.length; i++) {
+                                    alert(films[i]);
+                                }
+                                </code></pre>
+                </div>
+
+            </section>
+
+            <section>
+                <h3 style="color:red; font-weight:bold;">BREAKING NEWS!!!</h3>
+                <p>from now please save all HOMEWORKs</p>
+                <p> in </p>
+                <h1><a href="https://codepen.io/">CODEPEN.io</a></h1>
+            </section>
+
+            <section>
+                <h3>Exercise 8.1: sum and product array</h3>
+                <p>Write a JavaScript function to compute the sum and product of an array of integers..</p>
+                <div>
+                    <pre><code data-trim>
+                                let array_numbers = [1, 2, 3, 4, 5, 6]
+                                // your code
+                                </code></pre>
+
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                        
+                                Sum : 21 Product :  720
+                                </code></pre>
+                </div>
+
+            </section>
+
+
+            <section>
+                <h3>Exercise 8.2: Remove Duplicated</h3>
+                <p>Write a JavaScript function to remove duplicate items from an array</p>
+                <div>
+                    <pre><code data-trim>
+                            function removeDuplicates(num){
+                                // your code
+                                return ......
+                            }
+                            let array_numbers = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+                            result = removeDuplicates(array_numbers);
+                            console.log(array_numbers);
+                            console.log(result);
+                                    </code></pre>
+
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                                    [1,2,2,4,5,4,7,8,7,3,6]
+                                    [1,2,3,4,5,6,7,8]
+                                            </code></pre>
+                </div>
+
+            </section>
+
+
+
+            <section>
+                <h3>Exercise 8.3: Randomly arrange or shuffle an array</h3>
+                <p>Write a JavaScript function to shuffle an array.</p>
+                <div>
+                    <pre><code data-trim>
+                        function shuffleArray(num){
+                            // your code
+                            return ......
+                        }
+                        let myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+                        console.log(shuffleArray(myArray));
+                                </code></pre>
+
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                        [5,3,0,9,8,2,1,4,7,6] // this is just an example
+                                </code></pre>
+                </div>
+
+            </section>
+            <section>
+                <h3>Exercise 8.4: Bonus</h3>
+                <p>Write a JavaScript function to find the most frequent item of an array.</p>
+                <div>
+                    <pre><code data-trim>
+                        function frequentItem(num){
+                            // your code
+                            return ......
+                        }
+                        let arr1=[3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+                        console.log(frequentItem(arr1));
+
+                        let arr2=[3, "b", "b", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+                        console.log(frequentItem(arr2));
+                        </code></pre>
+
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                        "I found the character 'a' - 5 times"
+                        "I found the character '3' - 4 times"
+                                </code></pre>
+                </div>
+
+            </section>
+
+
+        </div>
+    </div>
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, ]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function() {
+            $('code').click(function(event) {
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>

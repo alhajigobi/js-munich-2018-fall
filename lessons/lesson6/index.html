@@ -7,47 +7,7 @@
     <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
     <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
     <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
-    <style>
-        .reveal pre {
-            margin: 0;
-        }
-
-        .monospace {
-            font-family: monospace !important;
-        }
-
-        .illustration {
-            border: 0px
-        }
-
-        .reveal li {
-            margin-bottom: 0.5em;
-        }
-
-        .reveal pre {
-            width: 100%;
-        }
-
-        .reveal pre code {
-            cursor: pointer;
-        }
-
-        .reveal li pre {
-            width: fit-content;
-        }
-
-        .emphasis {
-            color: orange;
-            font-weight: bold;
-        }
-
-        .logo {
-            position: fixed;
-            /* Sit on top of the page content */
-            z-index: 2;
-            /* Specify a stack order in case you're using a different order for other elements */
-        }
-    </style>
+    <link rel="stylesheet" href="../../reveal.js/css/redi.css">
 </head>
 
 <body>
@@ -188,8 +148,7 @@
                 <h3>!</h3>
                 <ul>
                     <li>
-                        When the containing expression is false then it is <span class="emphasis">true</span>. In other word
-                        it negates the result.</li>
+                        When the containing expression is false then it is <span class="emphasis">true</span>. In other word it negates the result.</li>
                     <li class="fragment">Example:
                         <pre><code data-trim>
                             let x = 4;
@@ -381,15 +340,15 @@
             dependencies: [{
                 src: '../../reveal.js/plugin/highlight/highlight.js',
                 async: true,
-                callback: function () {
+                callback: function() {
                     hljs.initHighlightingOnLoad();
                 }
-            },]
+            }, ]
         });
 
         // Make each code example executable by clicking it:
-        $(document).ready(function () {
-            $('code').click(function (event) {
+        $(document).ready(function() {
+            $('code').click(function(event) {
                 eval($(this).text());
             });
         });

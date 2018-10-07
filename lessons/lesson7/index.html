@@ -7,47 +7,7 @@
     <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
     <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
     <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
-    <style>
-        .reveal pre {
-            margin: 0;
-        }
-
-        .monospace {
-            font-family: monospace !important;
-        }
-
-        .illustration {
-            border: 0px
-        }
-
-        .reveal li {
-            margin-bottom: 0.5em;
-        }
-
-        .reveal pre {
-            width: 100%;
-        }
-
-        .reveal pre code {
-            cursor: pointer;
-        }
-
-        .reveal li pre {
-            width: fit-content;
-        }
-
-        .emphasis {
-            color: orange;
-            font-weight: bold;
-        }
-
-        .logo {
-            position: fixed;
-            /* Sit on top of the page content */
-            z-index: 2;
-            /* Specify a stack order in case you're using a different order for other elements */
-        }
-    </style>
+    <link rel="stylesheet" href="../../reveal.js/css/redi.css">
 </head>
 
 <body>
@@ -253,12 +213,12 @@
                 </ul>
             </section>
             <section>
-                    <h3>Exercise 7.1.b: for-loop b</h3>
-                    <ul>
-                        <li>Code a function named <span class="emphasis">printOddFloors</span></li>
-                        <li>Print out the odd floor label of a building in the broswer</li>
-                        <li>AND skip the 13th floor.</li>
-                        <li> <pre><code data-trim>
+                <h3>Exercise 7.1.b: for-loop b</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">printOddFloors</span></li>
+                    <li>Print out the odd floor label of a building in the broswer</li>
+                    <li>AND skip the 13th floor.</li>
+                    <li> <pre><code data-trim>
                                 At floor: 25
                                 At floor: 23
                                 At floor: 21
@@ -272,20 +232,19 @@
                                 At floor: 3
                                 At floor: 1
                             </code></pre>
-                    </ul>
-                </section>
-                <section>
-                        <h3>Exercise 7.1.b: for-loop b continue</h3>
-                        <li>Hint look up and use the mod operator %   e.g <span class="emphasis"> i%2</span></li>
-                        <li>Don't forget to make the function call and use document.writeln</li>
-                </section>
+                </ul>
+            </section>
+            <section>
+                <h3>Exercise 7.1.b: for-loop b continue</h3>
+                <li>Hint look up and use the mod operator % e.g <span class="emphasis"> i%2</span></li>
+                <li>Don't forget to make the function call and use document.writeln</li>
+            </section>
             <section>
                 <p>Another kind of loop </p>
                 <h3 class="fragment">The "while" loop</h3>
             </section>
             <section>
-                <p>While the <code data-trim>condition</code> is <code data-trim>true</code>, the <code data-trim>code</code>                    from
-                    the loop body is repeated.</p>
+                <p>While the <code data-trim>condition</code> is <code data-trim>true</code>, the <code data-trim>code</code> from the loop body is repeated.</p>
                 <p class="fragment">The syntax is:</p>
                 <pre class="fragment"><code data-trim>
                     while (condition) {
@@ -346,8 +305,7 @@
             <section>
                 <h3>Exercise 7.4: Summation</h3>
                 <ul>
-                    <li>Write a function summation(n) that takes a single argument n, and computes the sum of all integers
-                        up to n starting from 0</li>
+                    <li>Write a function summation(n) that takes a single argument n, and computes the sum of all integers up to n starting from 0</li>
                     <li>For example: summation(3) -> 1 + 2 + 3 = 6</li>
                     <li>Or: summation(7) -> 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28</li>
                     <li>Use while-loop</li>
@@ -395,15 +353,15 @@
             dependencies: [{
                 src: '../../reveal.js/plugin/highlight/highlight.js',
                 async: true,
-                callback: function () {
+                callback: function() {
                     hljs.initHighlightingOnLoad();
                 }
-            },]
+            }, ]
         });
 
         // Make each code example executable by clicking it:
-        $(document).ready(function () {
-            $('code').click(function (event) {
+        $(document).ready(function() {
+            $('code').click(function(event) {
                 eval($(this).text());
             });
         });

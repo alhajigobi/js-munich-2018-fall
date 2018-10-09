@@ -1,0 +1,511 @@
+<html>
+
+<head>
+    <title>ReDI.js 9</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <link rel="stylesheet" href="../../reveal.js/css/redi.css">
+
+    <style>
+        .reveal .slides section .answer {
+            color: darkorange;
+            font-size: 90%;
+        }
+
+        .reveal .slides section li {
+            margin-bottom: 1em;
+        }
+
+        section.smaller {
+            font-size: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>🚀 Lesson 9 🚀</h3>
+            </section>
+
+            <section>
+                <h2>Quiz Time!</h2>
+            </section>
+
+            <section>
+                <h3><code data-trim>for (A; B; C)</code></h3>
+                <ul>
+                    <li class="fragment">
+                        What is <code>A</code> for?<br>
+                        <span class="answer fragment">Declaring a counter variable, e.g. <code data-trim>let i = 0;</code></span>
+                    </li>
+                    <li class="fragment">
+                        What is <code>B</code> for?<br>
+                        <span class="answer fragment">Defining the loop-condition, e.g. <code data-trim>i < 10;</code></span>
+                    </li>
+                    <li class="fragment">
+                        What is <code>C</code> for?<br>
+                        <span class="answer fragment">How to update the counter in each loop iteration, e.g. <code data-trim>i++</code></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let i = 0; i < 3; i++) {
+                        alert("Hooray!");
+                    }
+                </code></pre>
+                <p>
+                    What does it do?
+                </p>
+                <p class="answer fragment">
+                    Display "Hooray" three times!
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    function getN() {
+                        return 4;
+                    }
+                    for (let i = 0; i < getN(); i++) {
+                        alert("Hooray!");
+                    }
+                </code></pre>
+                <p>
+                    What does it do?
+                </p>
+                <p class="answer fragment">
+                    Display "Hooray" four times!
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let i = 0; i < 10; i += 3) {
+                        alert("Hooray!");
+                    }
+                </code></pre>
+                <p>
+                    What does it do?
+                </p>
+                <p class="answer fragment">
+                    Display "Hooray" four times! Why? 🤔
+                </p>
+                <p class="answer fragment">
+                    Let's print <code>i</code> in each iteration to find out:
+                </p>
+                <pre class="fragment"><code data-trim>
+                    for (let i = 0; i < 10; i += 3) {
+                        alert(i);
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let n = 2;
+                    for (let i = 0; i < 2 && n < 2; i++) {
+                        alert("Hooray!");
+                    }
+                </code></pre>
+                <p>
+                    What does it do?
+                </p>
+                <p class="answer fragment">
+                    Nothing!
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let n = 2;
+                    for (let i = 0; i < 2 || n < 2; i++) {
+                        alert("Hooray!");
+                    }
+                </code></pre>
+                <p>
+                    What does it do?
+                </p>
+                <p class="answer fragment">
+                    Display "Hooray" twice!
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    for (let i = 0; i < 2; i--) {
+                        alert("Hooray!");
+                    }
+                </code></pre>
+                <p>
+                    What does it do?
+                </p>
+                <p class="answer fragment">
+                    Infinite loop!! 😱<br>
+                    A programmer's worst nightmare!!
+                </p>
+                <p class="answer fragment">
+                    Avoid at all costs!
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    function printNStars(n) {
+                        for (let i = 0; i < n; i++) {
+                            console.log("*" + i);
+                        }
+                    }
+                    printNStars(3);
+                    printNStars(4);
+                </code></pre>
+                <p>
+                    What does the function do?
+                </p>
+                <p class="answer fragment">
+                    The function prints <code>n</code> stars with their index to the console.
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    function getNStars(n) {
+                        let stars = ''
+                        for (let i = 0; i < n; i++) {
+                            stars = stars + '*';
+                        }
+                        return stars;
+                    }
+                    console.log(getNStars(3));
+                    console.log(getNStars(4));
+                </code></pre>
+                <p>
+                    What does the function do?
+                </p>
+                <p class="answer fragment">
+                    Prints one row with <code>n</code> stars to the console!
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    // getNStars(n) is the function we just wrote!
+
+                    function printStarTriangle(n) {
+                        for (let i = 0; i < n; i++) {
+                            console.log(getNStars(i + 1));
+                        }
+                    }
+                    printStarTriangle(4);
+                    printStarTriangle(2);
+                </code></pre>
+                <p>
+                    What does the function do?
+                </p>
+                <p class="answer fragment">
+                    Prints a pyramid of stars to the console by using the function we just created!
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    It's always a good idea to separate your problem into smaller, simpler sub-problems!
+                </p>
+                <p class="fragment">
+                    This is called "Divide and Conquer"
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let favoriteFood = ['rice', 'chicken', 'fish'];
+                    let i = 1;
+                    alert(favoriteFood[i]);
+                </code></pre>
+                <p>
+                    What does this do?
+                </p>
+                <p class="answer fragment">
+                    Prints out the second food item, because we start counting at 0!
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let favoriteFood = ['rice', 'chicken', 'fish'];
+                    for(let i = 0; i < favoriteFood.length; i++) {
+                        alert(favoriteFood[i]);
+                    }
+                </code></pre>
+                <p>
+                    What does this do?
+                </p>
+                <p class="answer fragment">
+                    Prints out all the food items.
+                </p>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    let list = [true, false, 100, "haha"];
+                </code></pre>
+                <br>
+                What do these do?
+                <br>
+                <pre class="fragment"><code data-trim>
+                    alert(list[0] === list[0]);
+                </code></pre>
+                <pre class="fragment"><code data-trim>
+                    alert(list[0] === list[1]);
+                </code></pre>
+                <pre class="fragment"><code data-trim>
+                    alert(list[3] === list[2]);
+                </code></pre>
+                <pre class="fragment"><code data-trim>
+                    alert(list[0] !== !list[1]);
+                </code></pre>
+            </section>
+
+
+            <!-- Homework of lesson 8 -->
+
+            <section>
+                <h3>Let's talk about homework</h3>
+            </section>
+
+            <section>
+                <h3>Exercise 8.1: change an element</h3>
+                <p>Change the first item of cars to "Ford"</p>
+                <div>
+                    <pre><code data-trim>
+                        let cars = ["Volvo", "Jeep", "Mercedes"];
+                        ??? = "Ford";
+                        console.log(cars);
+                    </code></pre>
+
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                        (3) ["Ford", "Jeep", "Mercedes"]
+                    </code></pre>
+                </div>
+                <div class="fragment">
+                    <p>Solution</p>
+                    <pre><code data-trim>
+                        let cars = ["Volvo", "Jeep", "Mercedes"];
+                        cars[0] = "Ford";
+                        console.log(cars);
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="smaller">
+                <h3>Exercise 8.2: multiplied odd numbers</h3>
+                <p>Change all odd numbers to be those numbers multiplied by two</p>
+                <div>
+                    <pre><code data-trim>
+                        let numbers = [4, 9, 7, 2, 1, 8];
+                        // TODO: your code here
+                        console.log(numbers);
+                    </code></pre>
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                        (6) [4, 18, 14, 2, 2, 8]
+                    </code></pre>
+                </div>
+                <div class="fragment">
+                    <p>My solution</p>
+                    <pre><code data-trim>
+                        let numbers = [4, 9, 7, 2, 1, 8];
+                        for (let i = 0; i < numbers.length; i++) {
+                            if (numbers[i] % 2 === 1) {
+                                numbers[i] = numbers[i] * 2;
+                            }
+                        }
+                        console.log(numbers);
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="smaller">
+                <h3>Exercise 8.3: sum and product array</h3>
+                <p>Write a JavaScript function to compute the sum and product of an array of integers..</p>
+                <div>
+                    <pre><code data-trim>
+                        let numbers = [1, 2, 3, 4, 5, 6];
+                        // TODO: your code here
+                    </code></pre>
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                        "Sum : 21 Product :  720"
+                    </code></pre>
+                </div>
+                <div class="fragment">
+                    <p>My solution</p>
+                    <pre><code data-trim>
+                        let numbers = [1, 2, 3, 4, 5, 6];
+                        let sum = 0;
+                        let product = 1;
+                        for (let i = 0; i < numbers.length; i++) {
+                            sum += numbers[i];
+                            product *= numbers[i];
+                        }
+                        console.log("Sum : " + sum + " Product : " + product);
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="smaller">
+                <h3>Exercise 8.4: Remove Duplicated - Bonus</h3>
+                <p>Write a JavaScript function to remove duplicate items from an array</p>
+                <div>
+                    <pre><code data-trim>
+                        function removeDuplicates(array){
+                            // your code
+                            return ......
+                        }
+                        let numbers = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+                        let result = removeDuplicates(numbers);
+                        console.log("Original:", numbers);
+                        console.log("Without duplicates:", result);
+                    </code></pre>
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                        Original: [1,2,2,4,5,4,7,8,7,3,6]
+                        Without duplicates: [1,2,3,4,5,6,7,8]
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="smaller">
+                <h3>Exercise 8.4: Remove Duplicated - Bonus</h3>
+                <p>My solution</p>
+                <div>
+                    <pre><code data-trim>
+                        function removeDuplicates(array) {
+                            let newArray = [];
+                            for (let i = 0; i < array.length; i++) {
+                                let isUnique = true;
+                                // Compare to all previous numbers
+                                for (let j = 0; j < i; j++) {
+                                    if (array[i] === array[j]) {
+                                        // Already in the list
+                                        isUnique = false;
+                                    }
+                                }
+
+                                if (isUnique) {
+                                    // The number was not in the array already,
+                                    // so we can add it to the result:
+                                    newArray.push(array[i])
+                                }
+                            }
+
+                            return newArray;
+                        }
+                        let numbers = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+                        let result = removeDuplicates(numbers);
+                        console.log("Original:", numbers);
+                        console.log("Without duplicates:", result);
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="smaller">
+                <h3>Exercise 8.5: Randomly arrange or shuffle an array - Bonus</h3>
+                <p>Write a JavaScript function to shuffle an array.</p>
+                <div>
+                    <pre><code data-trim>
+                        function shuffleArray(array){
+                            // your code
+                            return ......
+                        }
+                        let myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+                        console.log(shuffleArray(myArray));
+                    </code></pre>
+
+                </div>
+                <p>Final result</p>
+                <div>
+                    <pre><code data-trim>
+                        [5,3,0,9,8,2,1,4,7,6] // this is just an example
+                    </code></pre>
+                </div>
+
+            </section>
+
+            <section class="smaller">
+                <h3>Exercise 8.5: Randomly arrange or shuffle an array - Bonus</h3>
+                <p>My solution</p>
+                <div>
+                    <pre><code data-trim>
+                        function shuffleArray(array) {
+                            for (let i = 0; i < array.length; i++) {
+                                // Swap with a random other element
+                                let swapI = Math.floor(Math.random() * Math.floor(array.length));
+                                let element = array[i];
+                                let swappedElement = array[swapI];
+                                array[i] = swappedElement;
+                                array[swapI] = element;
+                            }
+
+                            return array;
+                        }
+                        let myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+                        console.log(shuffleArray(myArray));
+                    </code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, ]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function() {
+            $('code').click(function(event) {
+                eval($(this).text());
+            });
+
+            function getNStars(n) {
+                let stars = ''
+                for (let i = 0; i < n; i++) {
+                    stars = stars + '*';
+                }
+                return stars;
+            }
+            window.list = [true, false, 100, "haha"];
+        });
+    </script>
+</body>
+
+</html>

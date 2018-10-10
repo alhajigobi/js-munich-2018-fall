@@ -19,8 +19,13 @@
             margin-bottom: 1em;
         }
 
-        section.smaller {
+        .reveal .slides section.smaller {
             font-size: 90%;
+        }
+
+        .reveal .slides section.smaller ul li {
+            font-size: 90%;
+            margin-bottom: 0.5em;
         }
     </style>
 </head>
@@ -471,6 +476,127 @@
                     </code></pre>
                 </div>
             </section>
+
+
+            <!-- Actual Content -->
+
+            <section>
+                    <h3>Let's learn something new!</h3>
+                </section>
+
+                <section>
+                    <h3>How to create arrays</h3>
+                    <p>So far:</p>
+                    <pre class="fragment"><code data-trim>
+                        let emptyArray = [];
+                    </code></pre>
+                    <br>
+
+                    <pre class="fragment"><code data-trim>
+                        let smallArray = ["lego", "star wars"];
+                    </code></pre>
+                    <br>
+
+                    <pre class="fragment"><code data-trim>
+                        let largeArray = [
+                            "orange",
+                            "apple",
+                            "pear",
+                            "cherry",
+                            "lemon",
+                            "banana",
+                            "strawberry",
+                            // etc.
+                        ]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>What if you don't know what should go into the array?</h3>
+                    <p class="fragment">
+                        Example: Todo-list<br>
+                        <img src="assets/todos.png">
+                    </p>
+                    <p class="fragment">How to build array with all the user's todos?</p>
+                </section>
+
+                <section>
+                    <p>Idea: Start with empty array, then add elements to it!</p>
+                    <p class="fragment">You can add elements with <code>array.push(element)</code>, e.g.:</p>
+                    <pre class="fragment"><code data-trim>
+                        let list = [];
+                        list.push("something");
+                        list.push("something else");
+                        alert(list);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Let's try it!</p>
+                    <!-- Give them the todo starter here -->
+                </section>
+
+                <section>
+                    <p>1. How to get all list elements in the todo list</p>
+                    <pre class="fragment"><code data-trim>
+                        let todoElements = document.getElementsByTagName('li');
+                        alert(todoElements.length);
+                        alert(todoElements[0]);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>2. How to get the text of a single todo element</p>
+                    <script>
+                        window.todoElements = [{textContent: 'Play with the cat', textContent: 'Paint a painting of a squirrel'}];
+                    </script>
+                    <pre class="fragment"><code data-trim>
+                        let firstTodoElement = todoElements[0];
+                        alert(firstTodoElement.textContent);
+                    </code></pre>
+                </section>
+
+                <section class="smaller">
+                    <h4>Ok, now you!</h4>
+                    <ul>
+                        <li>Add a <b>JS file</b> to your todo project</li>
+                        <li>Create a <b>new function</b> called <b>"getTodo(i)"</b></li>
+                        <li>It should take a number i and return the <b>text</b> of the todo item at that position</li>
+                        <li><b>Hint 1:</b> Use <code>document.getElementsByTagName('li')</code> to get all todo elements</li>
+                        <li><b>Hint 2:</b> Use <code>element.textContent</code> to get the text of a specific todo element</li>
+                        <li><b>Example result:</b> <code>getTodo(0)</code> should return <code>"Play with the cat"</code></li>
+                    </ul>
+                </section>
+
+                <section class="smaller">
+                    <h4>Next:</h4>
+                    <ul>
+                        <li>Create a second function <b>"getAllTodos()"</b></li>
+                        <li>It should use your "getTodo(i)" function to collect all the todo texts in one array</li>
+                        <li><b>Hint 1:</b> Do a for-loop over the number of <code>&lt;li&gt;</code>s on your page</li>
+                        <li><b>Hint 2:</b> Use <code>.length</code> to find out how many there are!</li>
+                        <li><b>Example result:</b> <code>["Play with the cat", "Paint a painting of a squirrel"]</code></li>
+                        <li><b>Bonus 1:</b> Add a function "getAllTodosReversed" that returns them in the reversed order</li>
+                        <li><b>Bonus 2:</b> Write the same functions, but to get all the headings on your page (<code>&lt;h1&gt;</code>)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>More array exercises!</h4>
+                </section>
+
+                <section class="smaller">
+                    <h4>Write a function "append", that:</h4>
+                    <ul>
+                        <li>Takes two arrays <code>a</code> and <code>b</code></li>
+                        <li>Returns a new array with <b>first</b> all the elements of <code>a</code>, <b>then</b> the ones of <code>b</code></li>
+                        <li><b>Hint 1:</b> Loop over the arrays, one after the other.</li>
+                        <li><b>Hint 2:</b> Start with an empty result array and add more to it later</li>
+                        <li><b>Hint 3:</b> Use <code>array.push()</code> to add elements to the array</li>
+                        <li><b>Example:</b><br><code>append([0, 1], [2, 3])</code> should be <code>[0, 1, 2, 3]</code></li>
+                        <li><b>Bonus:</b> Create a function <code>mix(a, b)</code> that would return<br><code>[0, 2, 1, 3]</code></li>
+                    </ul>
+                </section>
         </div>
     </div>
 

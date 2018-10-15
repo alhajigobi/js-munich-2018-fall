@@ -52,3 +52,9 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - Repeat arrays
 - HTML todo list -> array
 
+## [Lesson 10](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson10/)
+- Pure functions
+- Divide and conquer
+- Star Triangle exercise
+- The DOM
+- Page structure for the project

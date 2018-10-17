@@ -60,6 +60,108 @@
         </section>
 
         <section>
+            <h3>Review</h3>
+        </section>
+
+        <section class="smaller">
+            <pre><code data-trim>
+                function sum(x, y) {
+                    let c = x + y;
+                }
+
+                alert(sum(5, 10));
+            </code></pre>
+        </section>
+
+        <section class="smaller">
+            <pre><code data-trim>
+                function sum(x, y) {
+                    let c = x + y;
+                }
+
+                sum(5, 10);
+
+                alert(c);
+            </code></pre>
+        </section>
+
+        <section>
+            <p>Thinking like a developer - concepts</p>
+            <h3>Pure functions</h3>
+            <ul>
+                <li class="fragment">Depend only on arguments</li>
+                <li class="fragment">No side effects</li>
+            </ul>
+        </section>
+
+        <section class="smaller">
+            <pre><code data-trim>
+                let x = 5, y = 10;
+
+                function sum() {
+                    return x + y;
+                }
+            </code></pre>
+            <hr>
+            <ul>
+                <li class="fragment">Global variables – bad</li>
+                <li class="fragment">But cannot always be avoided</li>
+            </ul>
+        </section>
+
+        <section class="smaller">
+            <pre><code data-trim>
+                function sum(x, y) {
+                    alert(x + y);
+                }
+            </code></pre>
+            <hr>
+            <ul>
+                <li class="fragment">Side effect: output</li>
+            </ul>
+        </section>
+
+        <section class="smaller">
+            <p>alert() - pure or not?</p>
+        </section>
+
+        <section class="smaller">
+            <pre><code data-trim>
+                function sum(x, y) {
+                    alert(x + y);
+                }
+            </code></pre>
+            <hr>
+            <ul>
+                <li class="fragment">Mixing computations with output</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Single Responsibility Principle</h3>
+            <p>A function should solve one kind of problem</p>
+            <img class="fragment" style="height:400px" src="assets/single-responsibility.jpg">
+        </section>
+
+        <section>
+            <h3>Homework 10.1</h3>
+            <ul>
+                <li>Recreate the <a href="https://codepen.io/cssguy39/pen/RejMZw?editors=0010">Star triangle</a> example from scratch</li>
+                <li><strong>Bonus</strong>: Change it to print a random number of stars per line</li>
+                <li><strong>Mega Bonus</strong>: Instead of stars, print one of those symbols, chosen randomly: * + -</li>
+            </ul>
+        </section>
+
+        <section>
+            <p>Concepts</p>
+            <ul>
+                <li class="fragment">Divide and conquer</li>
+                <li class="fragment">Pure functions</li>
+                <li class="fragment">Single Responsibility Principle</li>
+            </ul>
+        </section>
+
+        <section>
             <pre><code data-trim>
                 let todoElements = document.getElementsByTagName('li');
             </code></pre>
@@ -69,10 +171,7 @@
         <section>
             <h2>The DOM</h2>
             <p class="fragment">Document Object Model</p>
-            <ul>
-                <li class="fragment"><a href="http://eloquentjavascript.net/14_dom.html">Eloquent JavaScript: DOM</a></li>
-                <li class="fragment"><a href="https://www.digitalocean.com/community/tutorials/introduction-to-the-dom">Digital Ocean</a></li>
-            </ul>
+            <p class="fragment">Friendly animal - play with it ;)</p>
         </section>
 
         <section>
@@ -80,6 +179,7 @@
             <ul>
                 <li class="fragment">Find an element</li>
                 <li class="fragment">Access/Change element's content</li>
+                <li class="fragment">Add an element</li>
                 <li class="fragment">Remove an element</li>
                 <li class="fragment">Listen to changes</li>
                 <li class="fragment">Change styling</li>
@@ -106,30 +206,53 @@
         <section>
             <h2>DOM: How do I ...?</h2>
             <ul>
-                <li class="fragment"><a href="http://eloquentjavascript.net/14_dom.html">Eloquent JavaScript: DOM</a></li>
-                <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName">MDN</a></li>
+                <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">MDN</a></li>
+                <li class="fragment"><a href="https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model">Digital Ocean</a></li>
             </ul>
         </section>
 
         <section>
-            <h2>The Project: page structure</h2>
-            <p>whiteboard</p>
+            <p>Events</p>
+            <pre><code data-trim>
+                <button onclick="alert('hello!')"></button>
+            </code></pre>
         </section>
 
-        <section>
-            <h2>Emmet</h2>
+        <section class="smaller">
+            <h3>Homework 11.1</h3>
             <ul>
-                <li>Editing HTML/CSS like a pro</li>
-                <li class="fragment">Built-in in CodePen / Available for most editors</li>
-                <li class="fragment"><a href="https://docs.emmet.io/">docs.emmet.io</a></li>
+                <li>Finish the HTML structure for the todo project</li>
+                <li>The page should at least have an input, a button, and a list of items</li>
+                <li>We'll have to go back to Visual Studio Code - CodePen is not good for debugging with DOM :(</li>
             </ul>
         </section>
 
-        <section>
-            <h3>Homework</h3>
+        <section class="smaller">
+            <h3>Homework 11.2</h3>
             <ul>
-                <li class="fragment">Recreate "Star triangle" from scratch</li>
-                <li class="fragment">Page setup (html/css) for project</li>
+                <li><a href="https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model">Reading</a></li>
+                <li>This is a very nice intro to the topic and will help you move on with the project.</li>
+                <li>If the time is tight, try to read at least the first couple of articles.</li>
+            </ul>
+        </section>
+
+        <section class="smaller">
+            <h3>Homework 11.3</h3>
+            <ul>
+                <li>Implement "add a todo" feature for the project</li>
+                <li>On button click, get the value from the input field (See <a href="https://codepen.io/cssguy39/pen/GYQLVm?editors=1010">Update todo</a>)</li>
+                <li>If the value is not empty, print it to the console. Otherwise, print "Please enter a todo item".</li>
+            </ul>
+        </section>
+
+        <section class="smaller">
+            <h3>Homework 11.3 - Extras</h3>
+            <ul>
+                <li><strong>Bonus</strong>: Clear the input field after you console out the value</li>
+                <li><strong>Mega Bonus</strong>: Instead of printing to the console, add a todo item to the page. Check this <a
+                        href="https://www.digitalocean.com/community/tutorials/how-to-make-changes-to-the-dom">article</a>.</li>
+                <li><strong>Super Mega Bonus</strong>: If the input field is empty when the user clicks the button,
+                    output "Please enter a todo item" somewhere on the page. You can add a paragraph for that. Style it red.</li>
             </ul>
         </section>
     </div>

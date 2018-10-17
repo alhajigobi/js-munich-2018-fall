@@ -56,5 +56,9 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - Pure functions
 - Divide and conquer
 - Star Triangle exercise
-- The DOM
 - Page structure for the project
+
+## [Lesson 11](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson11/)
+- Single responsibility principle
+- The DOM
+- Events

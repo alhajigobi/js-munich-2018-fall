@@ -51,6 +51,10 @@
             z-index: 2;
             /* Specify a stack order in case you're using a different order for other elements */
         }
+
+        .red {
+            background-color: red;
+        }
     </style>
 </head>
 
@@ -75,6 +79,17 @@
             <section>
                 <h4>Homework 11.2 - <a href="https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model">Read</a>
                     about the DOM</h4>
+                <p>What is the DOM?</p>
+                <p class="fragment">
+                    An HTML page is a document.
+                    The <strong>Document Object Model (DOM)</strong> represents that same document so it can be <strong>accessed</strong>
+                    and <strong>manipulated</strong>.
+                </p>
+            </section>
+
+            <section>
+                <h4>Homework 11.2 - <a href="https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model">Read</a>
+                    about the DOM</h4>
                 <p>Access elements in the DOM</p>
                 <ul class="fragment">
                     <li id="exampleId">
@@ -85,6 +100,11 @@
                     </li>
                     <li class="exampleClass">
                         <pre><code>getElementsByClassName()</code></pre>
+                    </li>
+
+                    <li class="fragment">
+                        Developer tools trick:
+                        <pre><code>$0</code></pre>
                     </li>
                 </ul>
             </section>
@@ -117,6 +137,9 @@
                     </li>
                     <li>
                         <pre><code>appendChild()</code></pre>
+                    </li>
+                    <li>
+                        <pre><code>classList.add()</code></pre>
                     </li>
                 </ul>
             </section>
@@ -156,8 +179,30 @@
                     <li>Third</li>
                     <li>Fourth</li>
                 </ul>
-            </code></pre>
+                </code></pre>
 
+            </section>
+
+            <section>
+                <h3>Exercise hints</h3>
+                <ul>
+                    <li>Traverse array of list items</li>
+                    <li>Use modulo operator (%) to find even items</li>
+                    <li>add class even to change background color</li>
+                </ul>
+            </section>
+
+
+
+            <section>
+                <h3>Homework 12.1</h3>
+                <p>⭐ Our favorite star triangle ⭐</p>
+                <ul>
+                    <li>This time use the DOM!</li>
+                    <li>Add a <code>span</code> for each star, use paragraph for each line.</li>
+                    <li><strong>BONUS:</strong> use different colors</li>
+                    <li>And don't forget to divide and conquer</li>
+                </ul>
             </section>
         </div>
     </div>

@@ -62,3 +62,6 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - Single responsibility principle
 - The DOM
 - Events
+
+## [Lesson 12](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson12/)
+- The DOM

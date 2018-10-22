@@ -1,0 +1,236 @@
+<html>
+
+<head>
+    <title>ReDI.js 12</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <style>
+        li.even {
+            background-color: lightblue;
+        }
+
+        .reveal pre {
+            margin: 0;
+        }
+
+        .monospace {
+            font-family: monospace !important;
+        }
+
+        .illustration {
+            border: 0px
+        }
+
+        .reveal li {
+            margin-bottom: 0.5em;
+        }
+
+        .reveal pre {
+            width: 100%;
+        }
+
+        .reveal pre code {
+            cursor: pointer;
+        }
+
+        .reveal li pre {
+            width: fit-content;
+        }
+
+        .emphasis {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .logo {
+            position: fixed;
+            /* Sit on top of the page content */
+            z-index: 2;
+            /* Specify a stack order in case you're using a different order for other elements */
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>🚀 Lesson 12 🚀</h3>
+            </section>
+
+            <section>
+                <h3>Review: Concepts</h3>
+                <ul>
+                    <li class="fragment">Divide and conquer</li>
+                    <li class="fragment">Pure functions</li>
+                    <li class="fragment">Single Responsibility Principle</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Homework 11.2 - <a href="https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model">Read</a>
+                    about the DOM</h4>
+                <p>What is the DOM?</p>
+                <p class="fragment">
+                    An HTML page is a document.
+                    The <strong>Document Object Model (DOM)</strong> represents that same document so it can be <strong>accessed</strong>
+                    and <strong>manipulated</strong>.
+                </p>
+            </section>
+
+            <section>
+                <h4>Homework 11.2 - <a href="https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model">Read</a>
+                    about the DOM</h4>
+                <p>Access elements in the DOM</p>
+                <ul class="fragment">
+                    <li id="exampleId">
+                        <pre><code>getElementById()</code></pre>
+                    </li>
+                    <li>
+                        <pre><code>getElementsByTagName()</code></pre>
+                    </li>
+                    <li class="exampleClass">
+                        <pre><code>getElementsByClassName()</code></pre>
+                    </li>
+
+                    <li class="fragment">
+                        Developer tools trick:
+                        <pre><code>$0</code></pre>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Homework 11.2 - <a href="https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model">Read</a>
+                    about the DOM</h4>
+                <p>Traverse the DOM</p>
+                <ul class="fragment" id="listOfDomTraverseMethods">
+                    <li>
+                        <pre><code>children</code></pre>
+                    </li>
+                    <li>
+                        <pre><code>parentNode</code></pre>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h4>Homework 11.2 - <a href="https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model">Read</a>
+                    about the DOM</h4>
+                <p>Make Changes to the DOM</p>
+                <ul class="fragment">
+                    <li>
+                        <pre><code>createElement()</code></pre>
+                    </li>
+                    <li>
+                        <pre><code>textContent</code></pre>
+                    </li>
+                    <li>
+                        <pre><code>appendChild()</code></pre>
+                    </li>
+                    <li>
+                        <pre><code>classList.add()</code></pre>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Homework 11.1 & 11.3 - TODO project</h3>
+                <ul>
+                    <li>Finish the HTML structure for the todo project</li>
+                    <li>Implement "add a todo" feature for the project</li>
+                    <li>On button click, get the value from the input field</li>
+                    <li>If the value is not empty, print it to the console. Otherwise, print "Please enter a todo
+                        item".</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Exercise</h3>
+                <ul>
+                    <li class="odd">Change the background color</li>
+                    <li class="even">of even items</li>
+                    <li class="odd">to make a list more readable</li>
+                    <li class="even">(it can be actually done with CSS only, but we want to practice arrays and DOM)</li>
+                </ul>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                <style>
+                li.even {
+                    background-color: lightblue;
+                }
+                </style>
+
+                <ul>
+                    <li>First</li>
+                    <li>Second</li>
+                    <li>Third</li>
+                    <li>Fourth</li>
+                </ul>
+                </code></pre>
+
+            </section>
+
+            <section>
+                <h3>Exercise hints</h3>
+                <ul>
+                    <li>Traverse array of list items</li>
+                    <li>Use modulo operator (%) to find even items</li>
+                    <li>add class even to change background color</li>
+                </ul>
+            </section>
+
+
+
+            <section>
+                <h3>Homework 12.1</h3>
+                <p>⭐ Our favorite star triangle ⭐</p>
+                <ul>
+                    <li>This time use the DOM!</li>
+                    <li>Add a <code>span</code> for each star, use paragraph for each line.</li>
+                    <li><strong>BONUS:</strong> use different colors</li>
+                    <li>And don't forget to divide and conquer</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            },]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function () {
+            $('code').click(function (event) {
+                //                console.info('Click!', $(this).text());
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -65,3 +65,15 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 
 ## [Lesson 12](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson12/)
 - The DOM
+- `document.getElement*` methods
+- Todo HTML Code [link](https://github.com/ReDI-School/js-munich-2018-fall/blob/master/lessons/lesson12/homework11/index.html)
+- Todo JS Code [link](https://github.com/ReDI-School/js-munich-2018-fall/blob/master/lessons/lesson12/homework11/todo-srp.js)
+
+## [Lesson 13](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson13/)
+- The DOM Review
+- How to read/write an `input`
+- How to read/write an HTML block
+- onClick Event intro
+- [Codepen Todo Counter](https://codepen.io/giulio-calzolari/pen/LgXPwM)
+- [Codepen Simple Calculator](https://codepen.io/giulio-calzolari/pen/yRQyBQ)
+

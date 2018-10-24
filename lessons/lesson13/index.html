@@ -1,0 +1,223 @@
+<html>
+
+<head>
+    <title>ReDI.js 13</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <link rel="stylesheet" href="../../reveal.js/css/redi.css">
+</head>
+
+
+<body>
+
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>🚀 Lesson 13 🚀</h3>
+            </section>
+
+            <section>
+                <h3>Homework Review</h3>
+            </section>
+
+            <section>
+                <h3>Homework 12.1</h3>
+                <ul>
+                    <li class="odd">Change the background color</li>
+                    <li class="even">of even items</li>
+                    <li class="odd">to make a list more readable</li>
+                    <li class="even">(it can be actually done with CSS only, but we want to practice arrays and DOM)</li>
+                </ul>
+            </section>
+
+            <section>
+                Start from this <a href="https://codepen.io/macrosak/pen/QZVyzb">CodePen</a>
+                <pre><code data-trim>
+                <style>
+                li.even {
+                    background-color: lightblue;
+                }
+                </style>
+
+                <ul>
+                    <li>First</li>
+                    <li>Second</li>
+                    <li>Third</li>
+                    <li>Fourth</li>
+                </ul>
+                </code></pre>
+
+            </section>
+
+            <section>
+                <h3>Review of Dom Actions</h3>
+                <p>How to read the value of an <code>input</code> field </p>
+                <div>
+                    <pre><code data-trim>
+                        <input type="text" id="exampleInput1" value="buy bread">
+                    </code></pre>
+                </div>
+                <p>Input: <input type="text" id="exampleInput1" value="buy bread" style="width: 210px;font-size: 25px;"></p>
+                <div>
+
+                    <pre><code data-trim>
+                        let todoInput = document.getElementById("exampleInput1").value;
+                        alert(todoInput);
+                    </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>But how it's works? 🤔</h3>
+            </section>
+
+            <section>
+                <h3><code>getElementById</code></h3>
+                <p>Will convert an HTML with the same <code>id</code> to a Javascript entity</p>
+                <p>Like every Javascript entity you can read/update/change its value</p>
+                <p style="color:red;">IMPORTANT: the <code>id</code> is Case Sentive</p>
+            </section>
+
+            <section>
+                <h3>The <code>id</code> must be unique</h3>
+                <p>If there are multiple elements with the same <code>id</code>, then the behavior of corresponding methods is unpredictable.</p>
+                <p>The browser may return any of them at random. So please stick to the rule and keep <code>id</code> unique.</p>
+            </section>
+
+
+            <section>
+                <h3>Read Input</h3>
+                <p>How to read the value of an <code>input</code> field </p>
+                <pre><code data-trim>
+                        <input type="text" id="exampleInput2" value="buy bread">
+                    </code></pre>
+                <p>Input: <input type="text" id="exampleInput2" value="buy bread" style="width: 210px;font-size: 25px;"></p>
+                <div>
+
+                    <pre><code data-trim>
+                        let todoInput = document.getElementById("exampleInput2").value;
+                        alert(todoInput);
+                    </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>Write Input</h3>
+                <p>How to write/change the value of an <code>input</code> field </p>
+                <pre><code data-trim>
+                    <input type="text" id="exampleInput3" value="buy something">
+                </code></pre>
+                <p>Input: <input type="text" id="exampleInput3" value="buy something" style="width: 210px;font-size: 25px;"></p>
+                <div>
+                    <pre><code data-trim>
+                        document.getElementById("exampleInput3").value = "buy milk";
+                    </code></pre>
+                </div>
+                <br>
+                <div>
+                    <pre><code data-trim>
+                        document.getElementById("exampleInput3").value = "buy bread";
+                    </code></pre>
+                </div>
+            </section>
+            <section>
+                <h3>Read HTML</h3>
+                <p>How to read a <code>div</code></p>
+                <div>
+                    <pre><code data-trim>
+                        <div id="divExample1" style="color:red;">Mr. Blue</div>
+                    </code></pre>
+                </div>
+                <div id="divExample1" style="color:red;">Mr. Blue</div>
+                <div>
+                    <pre><code data-trim>
+                        let divValue = document.getElementById("divExample1").textContent;
+                        alert(divValue);
+                    </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>Write HTML</h3>
+                <p>How to write into <code>div</code></p>
+                <div id="divExample2" style="color:red;">Mr. ???</div>
+                <div class="smaller">
+                    <pre><code data-trim>
+                        document.getElementById("divExample2").textContent = "Mr. Blue";
+                    </code></pre>
+                </div>
+                <br>
+                <div class="smaller">
+                    <pre><code data-trim>
+                        document.getElementById("divExample2").textContent = "Mrs. Red";
+                    </code></pre>
+                </div>
+            </section>
+
+
+            <section>
+                <h3>onclick Event</h3>
+                <p>If you add to the HTML <code>button</code> the keywork <code>onclick</code></p>
+                <div class="smaller">
+                    <pre><code data-trim>
+                            <button onclick="myFunction()">Click me</button>
+                    </code></pre>
+                </div>
+                <p>Every time you click on the button the Javascript <code>myFunction()</code> is executed</p>
+                <p style="color:red;">remember to use put the <code>()</code> this is function</p>
+            </section>
+
+
+            <section>
+                <h3>Exercise 13.1</h3>
+                <p>Let's put ll together</p>
+                Let's start from this <a href="https://codepen.io/giulio-calzolari/pen/LgXPwM">CodePen</a> and add a Dynamic counter of Todo</p>
+                <p>Every time you click it will also change the <code>Count</code> value</p>
+            </section>
+
+            <section>
+                <h3>Homework 13.2</h3>
+                <p>Simple Caculator</p>
+                Let's start from this <a href="https://codepen.io/giulio-calzolari/pen/yRQyBQ">CodePen</a></p>
+                <p style="color:red;">this is just a basic structure</p>
+                <p>- Implements the various function with<code>//TODO</code></p>
+                <p>- Create also <code>clickMultiplication</code>function</p>
+                <p>- Create also <code>clickDivision</code>function</p>
+
+            </section>
+        </div>
+    </div>
+
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, ]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function() {
+            $('code').click(function(event) {
+                //                console.info('Click!', $(this).text());
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>

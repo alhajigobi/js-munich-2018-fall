@@ -90,14 +90,14 @@
                     <p>
                         Fruit:
                         <select id="fruit">
-                            <option value="banana">Banana</option>
-                            <option value="apple">Apple</option>
-                            <option value="lemon">Lemon</option>
+                            <option value="10">Banana</option>
+                            <option value="5">Apple</option>
+                            <option value="12">Lemon</option>
                         </select>
                     </p>
                     <p>
                         Quantity:
-                        <input type="text" id="fruitQuantity" onchange="alert(this.value)">
+                        <input type="text" id="fruitQuantity">
                     </p>
                     <p>
                         <button>Calculate</button>
@@ -106,12 +106,13 @@
                         Price: <span id="price">X</span> EUR
                     </p>
                 </p>
+                <p><a href="https://codepen.io/macrosak/pen/ZqZMNo">CodePen</a></p>
             </section>
 
             <section>
                 <h3>HTML Dropdown Event</h3>
                 <p>
-                    <select id="colors" onchange="alert(this.value)">
+                    <select id="colors" onchange="alert('changed!')">
                         <option value="blue">Blue</option>
                         <option value="pink">Pink</option>
                         <option value="red">Red</option>
@@ -119,7 +120,7 @@
                 </p>
                 <p></p>
                 <pre><code>
-<select id="colors" onchange="alert(this.value)">
+<select id="colors" onchange="alert('changed!')">
     <option value="blue">Blue</option>
     <option value="pink">Pink</option>
     <option value="red">Red</option>
@@ -147,7 +148,7 @@
                 </p>
                 <pre><code>
 let shopItems = ['Banana', 'Apple', 'Lemon'];
-let prices = [4, 6, 8]
+let prices = [4, 6, 8];
                 </code></pre>
             </section>
         </div>

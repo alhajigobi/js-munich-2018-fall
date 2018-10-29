@@ -77,3 +77,7 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - [Codepen Todo Counter](https://codepen.io/giulio-calzolari/pen/LgXPwM)
 - [Codepen Simple Calculator](https://codepen.io/giulio-calzolari/pen/yRQyBQ)
 
+## [Lesson 14](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson14/)
+- HTML select
+- `onchange` event
+

@@ -81,3 +81,5 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - HTML select
 - `onchange` event
 
+## [Lesson 15](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson15/)
+- repeat everything

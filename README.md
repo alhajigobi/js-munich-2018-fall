@@ -82,4 +82,7 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - `onchange` event
 
 ## [Lesson 15](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson15/)
-- repeat everything
+- repeat lesson 1 - 6
+
+## [Lesson 16](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson16/)
+- repeat lesson 7 - 14

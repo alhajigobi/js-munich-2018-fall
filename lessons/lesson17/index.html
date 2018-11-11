@@ -1,0 +1,330 @@
+<html>
+
+<head>
+    <title>ReDI.js 17</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <link rel="stylesheet" href="../../reveal.js/css/redi.css">
+</head>
+
+
+<body>
+
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>🚀 Lesson 17 🚀</h3>
+            </section>
+            <section>
+                <h2>Events ⚡️</h2>
+            </section>
+            <section>
+                <h3> Events ⚡️</h3>
+                <ul>
+                    <li>We are concern about <span class="emphasis">Browser Event</span> </li>
+                    <li class="fragment">Core of any web application and most javascript enhancement</li>
+                    <li class="fragment">Connection UI action with Javascript action </li>
+                    <li class="fragment"> 👆🏼 ⚡️ + 🚀 = 😃 </li>
+                </ul>
+            </section>
+            <section>
+                <h3> Events ⚡️</h3>
+                <ul>
+                    <li>Actions by either a <span class="emphasis">User</span> or the <span class="emphasis">Browser</span>
+                        itself </li>
+                    <ul>
+                        <li class="fragment">The page finish loading</li>
+                        <li class="fragment">The user click on a button</li>
+                        <li class="fragment">The user hovers over a dropdown</li>
+                        <li class="fragment">The user submits a form</li>
+                        <li class="fragment">The user presses a key on their keyboard</li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <h3> Events ⚡️</h3>
+                <ul>
+                    <li>By coding JavaScript responses that execute upon a event</span>
+                        itself </li>
+                    <ul>
+                        <li class="fragment">Developer can display messages to a user</li>
+                        <li class="fragment">Validate data</li>
+                        <li class="fragment">React to a button click</li>
+                        <li class="fragment">Many other actions </li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <h3>When user clicks a button or press a key</span>
+                    itself </h3>
+                <ul>
+                    <li>When user clicks a button or press a key</span>
+                        itself </li>
+                    <ul>
+                        <li class="fragment">An event is fired ! ⚡️ </li>
+                        <li class="fragment">They are called "click event" or a "keypressed event"</li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                <h3>Event handler </h3>
+                <ul>
+                    <li>Is a javascript function that runs when an event fires</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Event listener </h3>
+                <ul>
+                    <li class="fragment">attaches a responsive interface to an element</li>
+                    <li class="fragment">allows the particular element to wait and "listen" for the given event to fire</li>
+                </ul>
+            </section>
+            <section>
+                <h3>3 ways to assign events to elements </h3>
+                <ul>
+                    <li class="fragment">Inline event handlers</li>
+                    <li class="fragment">Event handler properties</li>
+                    <li class="fragment">Event listeners</li>
+                </ul>
+            </section>
+            <section>
+                <h3>What type of event handling have you already learned?</h3>
+                <ul>
+                    <li class="fragment">
+                        Inline event handler
+                        <pre><code>onClick</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                                function greet() {
+                                    alert("Hi Mr. Pickleworth!");
+                                }
+                                <button onclick="greet()">Say hi!</button>
+                            </code></pre>
+                        <script>
+                            function greet() {
+                                alert("Hi Mr. Pickleworth!");
+                            }
+                        </script>
+                        <br><br>
+                        <button onclick="greet()" style="font-size: 1.5em;">Say hi!</button>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="fragment">Event handler properties</h3>
+                <ul>
+
+                    <li class="fragment">
+                        <pre><code data-trim>
+                                    &lt;!---HTML----&gt;
+                                    &lt;button id="myButton" style="font-size: 1.5em;"&gt;Say hi!&lt;/button&gt;
+                            </code></pre>
+                        <br>
+                        <pre><code data-trim>
+                                    &lt;!---Javascaript----&gt;
+                                        let myElement = document.getElementById('myButton');
+                                        function buttonClick() {
+                                            alert("You just clicked the button, Mr. Pickleworth!");
+                                        }
+                                        myElement.onclick= buttonClick;
+                            </code></pre>
+                        <br>
+                        <button id="myButton" style="font-size: 1.5em;">Click Here!</button>
+                        <script>
+                            let myElement = document.getElementById('myButton');
+                            function buttonClick() {
+                                alert("You just clicked the button, Mr. Pickleworth!");
+                            }
+                            myElement.onclick = buttonClick;
+                        </script>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                TODO Put 1 or 2 Ex here
+                https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript
+            </section>
+            <section>
+                <p class="fragment">While basic registration with event handnler properties is perfectly fine. 👌</p>
+                <ul>
+                    <li class="fragment">But there is one key flaw, you can't bind more than 1 function to an event. 🙀</li>
+                    <li class="fragment">Solution? Event listener</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Event listeners</h3>
+                <ul>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                                                &lt;!---HTML----&gt;
+                                                &lt;button id="myButton2" style="font-size: 1.5em;"&gt;Say hi!&lt;/button&gt;
+                                        </code></pre>
+                        <br>
+                        <pre><code data-trim>
+                                                &lt;!---Javascaript----&gt;
+                                                let advElement = document.getElementById('myButton2');
+                                                function buttonClick2() {
+                                                    alert("You just clicked the button, Mr. Pickleworth!");
+                                                }
+                                                advElement.addEventListener('click', buttonClick2, false);
+                                        </code></pre>
+                        <br>
+                        <button id="advButton" style="font-size: 1.5em;">Click Here!</button>
+                        <script>
+                            let advElement = document.getElementById('advButton');
+                            function buttonClick2() {
+                                alert("You just clicked the button, Mr. Pickleworth!");
+                            }
+                            advElement.addEventListener('click', buttonClick2, false);
+                        </script>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Let's try 2 events</h3>
+                <ul>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                                                &lt;!---HTML----&gt;
+                                                &lt;button id="myButton3" style="font-size: 1.5em;"&gt;Say hi!&lt;/button&gt;
+                                        </code></pre>
+                        <br>
+                        <pre><code data-trim>
+                                                &lt;!---Javascaript----&gt;
+                                                let advElement2 = document.getElementById('advButton2');
+                                                function buttonClickAction1() {
+                                                    alert("Hey there, you like red? Mr. Pickleworth!");
+                                                }
+                                                function buttonClickAction2() {
+                                                   advElement2.style.color = "red"
+                                                }
+                                                advElement2.addEventListener('click', buttonClickAction1, false);
+                                                advElement2.addEventListener('click', buttonClickAction2, false);
+                                        </code></pre>
+                        <br>
+                        <button id="advButton2" style="font-size: 1.5em;">Click Here!</button>
+                        <script>
+                            let advElement2 = document.getElementById('advButton2');
+                            function buttonClickAction1() {
+                                alert("Hey there, you like red? Mr. Pickleworth!");
+                            }
+                            function buttonClickAction2() {
+                                advElement2.style.color = "red"
+                            }
+                            advElement2.addEventListener('click', buttonClickAction1, false);
+                            advElement2.addEventListener('click', buttonClickAction2, false);
+                        </script>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3> Mouse Events 🐭 ⚡️ </h3>
+                <ul>
+                    <li class="fragment"><span class="emphasis">mousedown</span></li>
+                    <li class="fragment"><span class="emphasis">mouseup</span></li>
+                    <li class="fragment"><span class="emphasis">click</span></li>
+                    <li class="fragment"><span class="emphasis">dblick</span> - double click</li>
+                    <li class="fragment"><span class="emphasis">mouseover</span> - mouse pointer enter the boundry of an
+                        element
+                    </li>
+                    <li class="fragment"><span class="emphasis">mouseout</span></li>
+                    <li class="fragment"><span class="emphasis">mousemove</span></li>
+                </ul>
+            </section>
+            <section>
+                <h3> Keyboard Events ⌨️ ⚡️ </h3>
+                <ul>
+                    <li class="fragment"><span class="emphasis">keypress</span></li>
+                    <li class="fragment"><span class="emphasis">keydown</span></li>
+                    <li class="fragment"><span class="emphasis">keyup</span></li>
+                </ul>
+            </section>
+            <section>
+                <h3> Form Events 📄 ⚡️ </h3>
+                <ul>
+                    <li class="fragment"><span class="emphasis">select</span> - event fired when text in a textfield is selected
+                    </li>
+                    <li class="fragment"><span class="emphasis">change</span> - event fired when control loses in put focus
+                        or value has been modified
+                    </li>
+                    <li class="fragment"><span class="emphasis">submit</span></li>
+                    <li class="fragment"><span class="emphasis">reset</span></li>
+                    <li class="fragment"><span class="emphasis">focus</span> - event fired when an event gain focus</li>
+                    <li class="fragment"><span class="emphasis">blur</span> - event fired when an element loses focus</li>
+                </ul>
+            </section>
+            <section>
+                <h3> Other Events 📄 ⚡️ </h3>
+                <ul>
+                    <li class="fragment"><span class="emphasis">load</span> - event fired when all elements are loaded in
+                        the document</li>
+                    <li class="fragment"><span class="emphasis">resize</span> - event fired browser is resized</li>
+                    <li class="fragment"><span class="emphasis">scroll</span> - event fired when browser is scrolled</li>
+                    <li class="fragment"><span class="emphasis">unload</span> - event fired when the user leave the page</li>
+                </ul>
+            </section>
+            <section>
+                <h3>There are plenty more 😆</h3>
+                <ul>
+                    <li class="fragment">A lot of browsers have proprietary events</li>
+                    <li class="fragment">Gecko specfici for example: <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events">https://developer.mozilla.org/en/Gecko-Specific_DOM_Events</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                TODO ADD 1-2 EX HERE
+            </section>
+            <!-- event delegation and bubbling is probably too much 
+            <section>
+                <h3>Event Bubbling ⚡️🎈🎈🎈</h3>
+                <ul>
+                    <li class="fragment">also known as event propagation</li>
+                    <li class="fragment">When an event is fired and the event is "bubble" up the DOM</li>
+
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <img class="fragment" src="assets/event-bubble.png">
+                    <li class="fragment">anchor - paragraph - div - body - top</li>
+                </ul>
+            </section>
+            -->
+        </div>
+    </div>
+
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            },]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function () {
+            $('code').click(function (event) {
+                //                console.info('Click!', $(this).text());
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>

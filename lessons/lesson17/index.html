@@ -8,6 +8,26 @@
     <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
     <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
     <link rel="stylesheet" href="../../reveal.js/css/redi.css">
+
+    <style>
+        .reveal .slides section .answer {
+            color: darkorange;
+            font-size: 90%;
+        }
+
+        .reveal .slides section li {
+            margin-bottom: 0.5em;
+        }
+
+        .reveal .slides section.smaller {
+            font-size: 90%;
+        }
+
+        .reveal .slides section.smaller ul li {
+            font-size: 90%;
+            margin-bottom: 0.5em;
+        }
+    </style>
 </head>
 
 
@@ -20,26 +40,293 @@
                 <h1>Intro to JavaScript</h1>
                 <h3>🚀 Lesson 17 🚀</h3>
             </section>
+
+            <section><h2>Quiz! 😆</h2></section>
+
+            <section>
+                <h3>Pure functions</h3>
+                <ul>
+                    <li class="fragment">
+                        When is a function pure?<br>
+                        <span class="answer fragment">Depends only on arguments and has no side effects</span>
+                    </li>
+                    <li class="fragment">
+                        Should you use global variables inside functions?<br>
+                        <span class="answer fragment">Only if it can't be avoided!</span>
+                    </li>
+                    <li class="fragment">
+                        When should you use pure functions?<br>
+                        <span class="answer fragment">As often as possible</span>
+                    </li>
+                    <li class="fragment">
+                        When should you not use a pure function?<br>
+                        <span class="answer fragment">When side-effects are explicitly expected,<br>
+                            e.g. to change the website content</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Find the flaws!</h3>
+                <ul>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            var x = 10, y = 11;
+                            function add() {
+                                return x + y;
+                            }
+                        </code></pre>
+                        <span class="answer fragment">Avoid using global variables!</span>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            function add() {
+                                let x = 10, y = 11;
+                                return x + y;
+                            }
+                        </code></pre>
+                        <span class="answer fragment">Should use arguments!</span>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            function add(x, y) {
+                                alert(x, y);
+                            }
+                        </code></pre>
+                        <span class="answer fragment">Should use return!</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Find the flaws!</h3>
+                <ul>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            let status = '';
+                            function add(x, y) {
+                                status = 'adding...'
+                                return x + y;
+                            }
+                        </code></pre>
+                        <span class="answer fragment">Avoid changing global variables!</span>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            function add(x, y) {
+                                return x, y;
+                            }
+                        </code></pre>
+                        <span class="answer fragment">Perfect! ✨</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Exercise 17.1: Pure Functions (<b>10 minutes!!</b>)</h3>
+                <ol>
+                    <li>Write a function multiply(a, b) that returns a * b</li>
+                    <li>Write a function power(a, b) that returns a ^ b.<br>It should use your multiply function!</li>
+                </ol>
+                <h4>Examples:</h4>
+                <ul>
+                    <li>multiply(4, 2) = 4 * 2 = 8</li>
+                    <li>power(3, 3) = 3 * 3 * 3 = 27</li>
+                    <li>power(2, 4) = 2 * 2 * 2 * 2 = 16</li>
+                </ul>
+            </section>
+
+            <section><h2>More Quiz! 😆</h2></section>
+
+            <section>
+                <ul>
+                    <li class="fragment">
+                        How to get an HTML element with id '#myElement'?<br>
+                        <span class="answer fragment"><pre><code data-trim>document.getElementById("myElement")</code></pre></span>
+                    </li>
+                    <li class="fragment">
+                        How to get the text written in an HTML element 'e'?<br>
+                        <span class="answer fragment"><pre><code data-trim>e.textContent</code></pre></span>
+                    </li>
+                    <li class="fragment">
+                        How to change the text written in an HTML element 'e'?<br>
+                        <span class="answer fragment"><pre><code data-trim>e.textContent = "new text!";</code></pre></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <pre><code data-trim>
+                    &lt;div id="div1"&gt;
+                        &lt;div id="div2"&gt;redi&lt;/div&gt;
+                        &lt;div id="div3"&gt;school&lt;/div&gt;
+                        is cool
+                    &lt;/div&gt;
+                </code></pre>
+                <div id="div1" style="display: none">
+                    <div id="div2">redi</div>
+                    <div id="div3">school</div>
+                    is cool
+                </div>
+                <br>
+                <ul>
+                    <li class="fragment">
+                        <pre><code data-trim>alert(document.getElementById("div2").textContent);</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>alert(document.getElementById("div3").textContent);</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>alert(document.getElementById("div1").textContent);</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>alert(document.getElementById("div2").parentElement.textContent);</code></pre>
+                    </li>
+                </ul>
+            </section>
+
             <section>
                 <h2>Events ⚡️</h2>
             </section>
+
             <section>
-                <h3> Events ⚡️</h3>
+                <h3>An event can be...</h3>
                 <ul>
-                    <li>We are concern about <span class="emphasis">Browser Event</span> </li>
-                    <li class="fragment">Core of any web application and most javascript enhancement</li>
-                    <li class="fragment">Connection UI action with Javascript action </li>
-                    <li class="fragment"> 👆🏼 ⚡️ + 🚀 = 😃 </li>
+                    <li class="fragment">The user <b>clicks</b> on a link</li>
+                    <li class="fragment">The user <b>enters</b> a password</li>
+                    <li class="fragment">The user <b>presses</b> the escape key</li>
+                    <li class="fragment">The page <b>finishes</b> loading</li>
+                    <li class="fragment">etc.</li>
+                </ul>
+                <h4 class="answer fragment">-> Super useful and important!</h4>
+            </section>
+
+            <section>
+                <p>We've already talked about a form of events before...<br>Do you remember which?</p>
+                <div class="fragment">
+                    <span class="answer">onclick!</span>
+                    <pre><code data-trim>
+                        &lt;button onclick="alert('Hi Mr. Pickleworth!')">Say hi!&lt;/button>
+                    </code></pre>
+                    <br>
+                    <button onclick="alert('Hi Mr. Pickleworth!')">Say hi!</button>
+                </div>
+            </section>
+
+            <section>
+                <p>With onclick, you can put JS code directly into HTML.</p>
+                <p>But what if you want to run more complex code?</p>
+                <div class="fragment">
+                    <span class="answer">Define a function just for the click!</span>
+                    <pre><code data-trim>
+                        function onClick() {
+                            var name = prompt("What's your name?");
+                            alert("Hi " + name + "!");
+                        }
+                    </code></pre>
+                    <pre><code data-trim>
+                        &lt;button onclick="onClick()">Say hi!&lt;/button>
+                    </code></pre>
+                    <br>
+                    <script>
+                        function onClick() {
+                            var name = prompt("What's your name?");
+                            alert("Hi " + name + "!");
+                        }
+                    </script>
+                    <button onclick="onClick()">Say hi!</button>
+                </div>
+            </section>
+
+            <section>
+                <p>Still has some disadvantages:</p>
+                <ul>
+                    <li class="fragment">We're <b>mixing</b> JS code with HTML</li>
+                    <li class="fragment">What if we want to <b>change</b> a button's click event <b>later on</b>?</li>
+                    <li class="fragment">What if we want to have <b>multiple</b> onclick-functions?</li>
+                    <li class="fragment">What about other kinds of events except clicks?</li>
                 </ul>
             </section>
+
             <section>
-                <h3> Events ⚡️</h3>
+                <h3>Solution: Event Handlers ⚡️</h3>
+                <p><pre><code data-trim>element.addEventListener(eventType, eventHandler)</code></pre></p>
+                <div class="fragment">
+                    <p>For example:</p>
+                    <pre><code data-trim>
+                        &lt;button id="ok-button">OK&lt;/button>
+                    </code></pre>
+                    <pre><code data-trim>
+                        function onOkButtonClick() {
+                            alert("Someone clicked on OK!");
+                        }
+                        var okButton = document.getElementById("ok-button");
+                        okButton.addEventListener("click", onOkButtonClick);
+                    </code></pre>
+                    <br>
+                    <button id="ok-button">OK</button>
+                    <script>
+                        function onOkButtonClick() {
+                            alert("Someone clicked on OK!");
+                        }
+                        var okButton = document.getElementById("ok-button");
+                        okButton.addEventListener("click", onOkButtonClick);
+                    </script>
+                </div>
+            </section>
+
+            <section>
+                <h3>Input events: Input</h3>
+                <p>This event is caused when a user changes an input's content</p>
+                <p><pre><code data-trim>inputElement.addEventListener("input", eventHandler)</code></pre></p>
+                <div class="fragment">
+                    <p>For example:</p>
+                    <pre><code data-trim>
+                        &lt;input id="username-input">&lt;/input>
+                    </code></pre>
+                    <pre><code data-trim>
+                        function onUsernameInput() {
+                            console.log('click');
+                        }
+                        var usernameInput = document.getElementById("username-input");
+                        usernameInput.addEventListener("input", onUsernameInput);
+                    </code></pre>
+                    <br>
+                    <input id="username-input"></input>
+                    <script>
+                        function onUsernameInput() {
+                            console.log('click');
+                        }
+                        var usernameInput = document.getElementById("username-input");
+                        usernameInput.addEventListener("input", onUsernameInput);
+                    </script>
+                </div>
+            </section>
+
+            <section class="smaller">
+                <h3>Exercise 17.2: Input Event (<b>15 minutes!!</b>)</h3>
+                <ol>
+                    <li>Create a new codepen with an input element and an empty paragraph.</li>
+                    <li>Whenever the user enters something to the input, set the text inside the paragraph to the input's value.</li>
+                </ol>
+                <h4>Tips:</h4>
+                <ul>
+                    <li><code>inputElement.addEventListener("input", ...);</code></li>
+                    <li><code>inputElement.value;</code></li>
+                    <li><code>paragraphElement.textContent = ...;</code></li>
+                </ul>
+            </section>
+
+
+            <!-- skipping older version
+            <section>
+                <h3>Events ⚡️</h3>
                 <ul>
                     <li>Actions by either a <span class="emphasis">User</span> or the <span class="emphasis">Browser</span>
                         itself </li>
                     <ul>
-                        <li class="fragment">The page finish loading</li>
-                        <li class="fragment">The user click on a button</li>
+                        <li class="fragment">The page finishes loading</li>
+                        <li class="fragment">The user clicks on a button</li>
                         <li class="fragment">The user hovers over a dropdown</li>
                         <li class="fragment">The user submits a form</li>
                         <li class="fragment">The user presses a key on their keyboard</li>
@@ -47,28 +334,22 @@
                 </ul>
             </section>
             <section>
-                <h3> Events ⚡️</h3>
+                <h3>Events ⚡️</h3>
                 <ul>
-                    <li>By coding JavaScript responses that execute upon a event</span>
-                        itself </li>
+                    <li>By coding JavaScript responses that execute upon a event, we can ...</li>
                     <ul>
-                        <li class="fragment">Developer can display messages to a user</li>
-                        <li class="fragment">Validate data</li>
-                        <li class="fragment">React to a button click</li>
-                        <li class="fragment">Many other actions </li>
+                        <li class="fragment">display messages to a user</li>
+                        <li class="fragment">validate data</li>
+                        <li class="fragment">react to a button click</li>
+                        <li class="fragment">many other actions!</li>
                     </ul>
                 </ul>
             </section>
             <section>
-                <h3>When user clicks a button or press a key</span>
-                    itself </h3>
+                <h3>When the user clicks a button or presses a key </h3>
                 <ul>
-                    <li>When user clicks a button or press a key</span>
-                        itself </li>
-                    <ul>
-                        <li class="fragment">An event is fired ! ⚡️ </li>
-                        <li class="fragment">They are called "click event" or a "keypressed event"</li>
-                    </ul>
+                    <li class="fragment">An event is fired ! ⚡️ </li>
+                    <li class="fragment">They are called "click event" or a "keypressed event"</li>
                 </ul>
             </section>
             <section>
@@ -97,7 +378,7 @@
                 <ul>
                     <li class="fragment">
                         Inline event handler
-                        <pre><code>onClick</code></pre>
+                        <pre><code>onclick</code></pre>
                     </li>
                     <li class="fragment">
                         <pre><code data-trim>
@@ -151,7 +432,7 @@
                 https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript
             </section>
             <section>
-                <p class="fragment">While basic registration with event handnler properties is perfectly fine. 👌</p>
+                <p class="fragment">While basic registration with event handler properties is perfectly fine. 👌</p>
                 <ul>
                     <li class="fragment">But there is one key flaw, you can't bind more than 1 function to an event. 🙀</li>
                     <li class="fragment">Solution? Event listener</li>
@@ -222,7 +503,9 @@
                         </script>
                     </li>
                 </ul>
-            </section>
+            </section> -->
+
+
             <section>
                 <h3> Mouse Events 🐭 ⚡️ </h3>
                 <ul>
@@ -278,10 +561,7 @@
                 </ul>
             </section>
 
-            <section>
-                TODO ADD 1-2 EX HERE
-            </section>
-            <!-- event delegation and bubbling is probably too much 
+            <!-- event delegation and bubbling is probably too much
             <section>
                 <h3>Event Bubbling ⚡️🎈🎈🎈</h3>
                 <ul>

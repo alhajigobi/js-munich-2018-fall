@@ -86,3 +86,6 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 
 ## [Lesson 16](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson16/)
 - repeat lesson 7 - 14
+
+## [Lesson 17](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson17/)
+- Click and input events

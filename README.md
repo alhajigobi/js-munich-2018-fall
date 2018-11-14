@@ -89,3 +89,19 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 
 ## [Lesson 17](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson17/)
 - Click and input events
+
+## [Lesson 18](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson18/)
+- Emmet
+- What to do when you get stuck
+- Intro to objects
+
+## The Project: TODO App
+- Add item
+- When the user starts with an empty state, show “Nothing to do yet. Create your first item!”.
+- Remove item
+- Mark item as complete
+- When the user completes / removes all tasks, show “Great job, nothing to do!”
+- Move item to the top/bottom of the list
+- Option to show/hide completed tasked
+- Show counter for open tasks
+- Edit item

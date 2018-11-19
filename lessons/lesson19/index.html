@@ -1,0 +1,356 @@
+<html>
+
+<head>
+    <title>ReDI.js 19</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <style>
+        .reveal pre {
+            margin: 0;
+        }
+
+        .monospace {
+            font-family: monospace !important;
+        }
+
+        .illustration {
+            border: 0px
+        }
+
+        .reveal li {
+            margin-bottom: 0.5em;
+        }
+
+        .reveal pre {
+            width: 100%;
+        }
+
+        .reveal pre code {
+            cursor: pointer;
+        }
+
+        .reveal li pre {
+            width: fit-content;
+        }
+
+        .emphasis {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .logo {
+            position: fixed;
+            /* Sit on top of the page content */
+            z-index: 2;
+            /* Specify a stack order in case you're using a different order for other elements */
+        }
+
+        .reveal table td {
+            padding: 0.1em 0.25em 0.1em 0.25em;
+            font-size: 0.8em;
+        }
+
+        .reveal table td pre code {
+            max-height: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>🚀 Lesson 19 🚀</h3>
+            </section>
+
+            <section><h2>Quiz! 😆</h2></section>
+
+            <section>
+                <h3>What do these do?</h3>
+                <ul>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            let user = {
+                                name: "Max",
+                                password: "hunter123",
+                            };
+                            alert(user.password);
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            let user = {
+                                name: "Max",
+                                password: "hunter123",
+                            };
+                            user.email = "max@gmail.com"
+                            alert(user.email);
+                        </code></pre>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>What do these do?</h3>
+                <ul>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            let users = [{ name: "Ben" }, { name: "Alex" }];
+                            alert(users[1].name);
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            let users = [{ name: "Ben" }, { name: "Alex" }];
+                            users[0] = users[1];
+                            alert(users[0].name);
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        <pre><code data-trim>
+                            let users = [{ name: "Ben" }, { name: "Alex" }];
+                            users[0].secondName = users[1].name;
+                            users[1].secondName = users[0].name;
+                            alert(users[1].secondName);
+                        </code></pre>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Events</h3>
+                <ul>
+                    <li class="fragment">
+                        <p>How to run a function when a button is clicked?</p>
+                        <div class="fragment">
+                            <pre><code data-trim>
+                                &lt;button id="button">Beep&lt;/button>
+                            </code></pre>
+                            <pre><code data-trim>
+                                function onClick() {
+                                    // ...
+                                }
+                                let buttonElement = document.getElementById("button");
+                                buttonElement.addEventListener("click", onClick);
+                            </code></pre>
+                        </div>
+                    </li>
+                    <li class="fragment">
+                        <p>How to run a function when an input is edited?</p>
+                        <div class="fragment">
+                            <pre><code data-trim>
+                                &lt;button id="button">Beep&lt;/button>
+                            </code></pre>
+                            <pre><code data-trim>
+                                function onInput() {
+                                    // ...
+                                }
+                                let inputElement = document.getElementById("input");
+                                inputElement.addEventListener("input", onInput);
+                            </code></pre>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>What does this button do?</h3>
+                <pre><code data-trim>
+                    &lt;button id="button">Beep&lt;/button>
+                </code></pre>
+                <pre><code data-trim>
+                    let buttonElement = document.getElementById("button");
+
+                    function onClick1() {
+                        alert('1');
+                    }
+
+                    buttonElement.addEventListener("click", onClick1);
+                </code></pre>
+                <br>
+                <div style="text-align: center;">
+                    <button id="button1" style="padding: .5em; font-size: 1.2em; border: 1px solid black">Beep</button>
+                </div>
+                <script>
+                    (function () {
+                        let buttonElement = document.getElementById("button1");
+
+                        function onClick1() {
+                            alert('1');
+                        }
+
+                        buttonElement.addEventListener("click", onClick1);
+                    })();
+                </script>
+            </section>
+
+            <section>
+                <h3>What does this button do?</h3>
+                <pre><code data-trim>
+                    &lt;button id="button">Beep&lt;/button>
+                </code></pre>
+                <pre><code data-trim>
+                    let buttonElement = document.getElementById("button");
+
+                    function onClick1() {
+                        alert('1');
+                    }
+                    function onClick2() {
+                        alert('2');
+                    }
+
+                    buttonElement.addEventListener("click", onClick1);
+                    buttonElement.addEventListener("click", onClick2);
+                </code></pre>
+                <br>
+                <div style="text-align: center;">
+                    <button id="button2" style="padding: .5em; font-size: 1.2em; border: 1px solid black">Beep</button>
+                </div>
+                <script>
+                    (function() {
+                        let buttonElement = document.getElementById("button2");
+
+                        function onClick1() {
+                            alert('1');
+                        }
+                        function onClick2() {
+                            alert('2');
+                        }
+
+                        buttonElement.addEventListener("click", onClick1);
+                        buttonElement.addEventListener("click", onClick2);
+                    })();
+                </script>
+            </section>
+
+            <section>
+                <h3>What does this button do?</h3>
+                <pre><code data-trim>
+                    &lt;button id="button">Beep&lt;/button>
+                </code></pre>
+                <pre><code data-trim>
+                    let buttonElement = document.getElementById("button");
+
+                    function onClick1() {
+                        alert('1');
+                    }
+                    function onClick2() {
+                        alert('2');
+                    }
+
+                    buttonElement.addEventListener("click", onClick1);
+                    buttonElement.addEventListener("click", onClick2);
+                    buttonElement.removeEventListener("click", onClick1);
+                </code></pre>
+                <br>
+                <div style="text-align: center;">
+                    <button id="button3" style="padding: .5em; font-size: 1.2em; border: 1px solid black">Beep</button>
+                </div>
+                <script>
+                    (function() {
+                        let buttonElement = document.getElementById("button3");
+
+                        function onClick1() {
+                            alert('1');
+                        }
+                        function onClick2() {
+                            alert('2');
+                        }
+
+                        buttonElement.addEventListener("click", onClick1);
+                        buttonElement.addEventListener("click", onClick2);
+                        buttonElement.removeEventListener("click", onClick1);
+                    })();
+                </script>
+            </section>
+
+            <section>
+                <h3>Imagine</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <pre><code data-trim>
+                                &lt;ul>
+                                    &lt;li>
+                                        &lt;span class="name">
+                                            Paul
+                                        &lt;/span>
+                                        &lt;button class="delete">
+                                            Delete
+                                        &lt;/button>
+                                    &lt;/li>
+                                    &lt;li>
+                                        &lt;span class="name">
+                                            Timothy
+                                        &lt;/span>
+                                        &lt;button class="delete">
+                                            Delete
+                                        &lt;/button>
+                                    &lt;/li>
+                                &lt;/ul>
+                            </code></pre>
+                        </td>
+                        <td>
+                            <pre><code data-trim>
+                                function onDelete() {
+                                    // TODO:
+                                    // How to delete the correct item?
+                                }
+
+                                let deleteButtons = document.getElementsByClassName("delete");
+                                deleteButtons.addEventListener("click", onDelete);
+                            </code></pre>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h3>Event Object</h3>
+                <ul>
+                    <li>Each event listener function gets an argument: The Event Object!</li>
+                    <li class="fragment">This event object has all the information about the event</li>
+                    <li class="fragment">
+                        Examples:
+                        <ul>
+                            <li><code>event.target</code> has the exact target element of the event</li>
+                            <li><code>event.key</code> stores which keyboard key was pressed</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, ]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function() {
+            $('code').click(function(event) {
+                //                console.info('Click!', $(this).text());
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>

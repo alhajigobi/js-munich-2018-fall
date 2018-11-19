@@ -95,6 +95,10 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - What to do when you get stuck
 - Intro to objects
 
+## [Lesson 19](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson19/)
+- Repeat objects and events
+- event.target
+
 ## The Project: TODO App
 - Add item
 - When the user starts with an empty state, show “Nothing to do yet. Create your first item!”.

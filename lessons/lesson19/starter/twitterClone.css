@@ -1,0 +1,25 @@
+body {
+    background-color: lightblue;
+    font-family: Arial;
+    font-size: 18px;
+  }
+  
+  input, button {
+    padding: 1em;
+    font-size: 18px;
+    border: 1px solid #64b2ee;
+    border-radius: 10px;
+  }
+  
+  input {
+    width: 60%;
+  }
+  
+  button {
+    background-color: #64b2ee;
+    color: white;
+  }
+  
+  #counter.error {
+    color: red;
+  }

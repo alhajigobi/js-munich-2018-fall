@@ -100,12 +100,16 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - event.target
 
 ## The Project: TODO App
-- Add item
+- **Add item**
+- **Remove item**
 - When the user starts with an empty state, show “Nothing to do yet. Create your first item!”.
-- Remove item
 - Mark item as complete
 - When the user completes / removes all tasks, show “Great job, nothing to do!”
 - Move item to the top/bottom of the list
 - Option to show/hide completed tasked
 - Show counter for open tasks
 - Edit item
+
+**To get a certificate:**
+- Add/Remove item
+- One of the other features

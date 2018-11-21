@@ -99,6 +99,10 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - Repeat objects and events
 - event.target
 
+## [Lesson 20](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson20/)
+- Query selectors
+- Start of mini project: twitter clone
+
 ## The Project: TODO App
 - **Add item**
 - **Remove item**

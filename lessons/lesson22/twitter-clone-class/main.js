@@ -4,12 +4,29 @@ function addTweet(tweet) {
   let listEl = document.querySelector("#tweets > ul");
   let newEl = document.createElement("li");
   newEl.textContent = tweet;
+
+  // Add delete button and handler:
+  let deleteButtonEl = document.createElement("button");
+  deleteButtonEl.textContent = "x";
+
+  function onDeleteButton() {
+    newEl.remove();
+  }
+  deleteButtonEl.addEventListener("click", onDeleteButton);
+  newEl.appendChild(deleteButtonEl);
+
   listEl.appendChild(newEl);
 }
 
 function getTweetFromInput() {
   let inputEl = document.querySelector("#newTweet > input");
   return inputEl.value;
+}
+
+function clearInput() {
+  let inputEl = document.querySelector("#newTweet > input");
+  inputEl.value = "";
+  onInput();
 }
 
 function onTweetClick() {
@@ -19,6 +36,7 @@ function onTweetClick() {
   } else {
     addTweet(tweet);
   }
+  clearInput();
 }
 
 // Add event handler for onTweetClick
@@ -43,3 +61,5 @@ function onInputKey(event) {
 }
 
 inputEl.addEventListener("keypress", onInputKey);
+
+onInput();

@@ -103,6 +103,12 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - Query selectors
 - Start of mini project: twitter clone
 
+## [Lesson 21](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson21/)
+- Twitter clone
+
+## [Lesson 22](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson22/)
+- Twitter clone
+
 ## The Project: TODO App
 - **Add item**
 - **Remove item**

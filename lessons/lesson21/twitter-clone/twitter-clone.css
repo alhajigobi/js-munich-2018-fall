@@ -17,6 +17,16 @@ button:focus, input:focus {
   outline:0;
 }
 
+button.deleteTweet {
+  margin-left: 1em;
+  opacity: 0;
+  transition: all 0.1s ease-in;
+}
+
+#myTweets li:hover .deleteTweet {
+  opacity: 1;
+}
+
 #main {
   max-width: 600px;
   margin: 10% auto;
@@ -45,7 +55,7 @@ button:focus, input:focus {
   width: 20%;
 }
 
-.newTweet button:not([disabled]) {
+button:not([disabled]) {
   cursor: pointer;
 }
 

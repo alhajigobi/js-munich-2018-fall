@@ -29,7 +29,18 @@ function onAddClick() {
   // Create new element with text:
   let newItem = document.createElement("li");
   let newContent = document.createTextNode(inputText);
+  let removeButton = document.createElement("button");
+  removeButton.textContent = 'x';
+  removeButton.classList.add('deleteTweet')
   newItem.append(newContent);
+  newItem.append(removeButton);
+
+  removeButton.addEventListener("click", function(event) {
+    myTweets.removeChild(newItem);
+    // Show "no-tweets-yet" text if necessary
+    console.log(myTweets.children.length, myTweets.children);
+    if (myTweets.children.length == 1) noTweets.classList.remove("hidden");
+  })
 
   // Hide "no-tweets-yet" text:
   noTweets.classList.add("hidden");

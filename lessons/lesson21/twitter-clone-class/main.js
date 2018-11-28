@@ -14,7 +14,32 @@ function getTweetFromInput() {
 
 function onTweetClick() {
   let tweet = getTweetFromInput();
-  addTweet(tweet);
+  if (tweet === "") {
+    alert("Your tweet is empty!");
+  } else {
+    addTweet(tweet);
+  }
 }
 
-// TODO Add event handler for onTweetClick
+// Add event handler for onTweetClick
+let buttonEl = document.querySelector("#newTweet > button");
+buttonEl.addEventListener("click", onTweetClick);
+
+// create function to subtract from the counter when input  key is pressed
+function onInput() {
+  let tweet = getTweetFromInput();
+  let counterEl = document.querySelector("#newTweet > p.counter");
+  counterEl.textContent = Math.max(80 - tweet.length, 0);
+}
+
+// attach input event listener to input
+let inputEl = document.querySelector("#newTweet > input");
+inputEl.addEventListener("input", onInput);
+
+function onInputKey(event) {
+  if(event.key === "Enter") {
+    onTweetClick();
+  }
+}
+
+inputEl.addEventListener("keypress", onInputKey);

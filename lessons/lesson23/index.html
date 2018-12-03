@@ -1,0 +1,250 @@
+<html>
+
+<head>
+    <title>ReDI.js 23</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <style>
+        .reveal pre {
+            margin: 0;
+        }
+
+        .monospace {
+            font-family: monospace !important;
+        }
+
+        .illustration {
+            border: 0px
+        }
+
+        .reveal li {
+            margin-bottom: 0.5em;
+        }
+
+        .reveal pre {
+            width: 100%;
+        }
+
+        .reveal pre code {
+            cursor: pointer;
+        }
+
+        .reveal li pre {
+            width: fit-content;
+        }
+
+        .emphasis, .answer {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .logo {
+            position: fixed;
+            /* Sit on top of the page content */
+            z-index: 2;
+            /* Specify a stack order in case you're using a different order for other elements */
+        }
+
+        .reveal table td {
+            padding: 0.1em 0.25em 0.1em 0.25em;
+            font-size: 0.8em;
+        }
+
+        .reveal table td pre code {
+            max-height: none;
+        }
+
+        .reveal .slides section.smaller {
+            font-size: 90%;
+        }
+
+        .reveal .slides section.even.smaller {
+            font-size: 80%;
+        }
+
+        .reveal .slides section.smaller ul li {
+            font-size: 90%;
+            margin-bottom: 0.25em;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>🚀 Lesson 23 🚀</h3>
+            </section>
+
+            <section class="">
+                <h5>How do you run a function when a button is clicked?</h5>
+                <pre class="fragment"><code data-trim>
+                    let buttonEl = ...;
+                    function onClick() { ... };
+                    buttonEl.addEventListener("click", onClick);
+                </code></pre>
+            </section>
+
+            <section class="">
+                <h5>How do you run a function when an input is changed?</h5>
+                <pre class="fragment"><code data-trim>
+                    let inputEl = ...;
+                    function onInput() { ... };
+                    inputEl.addEventListener("input", onInput);
+                </code></pre>
+                <br>
+                <h5 class="fragment">How do you run a function when a key is pressed inside an input?</h5>
+                <pre class="fragment"><code data-trim>
+                    let inputEl = ...;
+                    function onKeyPress() { ... };
+                    inputEl.addEventListener("keypress", onKeyPress);
+                </code></pre>
+                <br>
+                <h5 class="fragment">What's the difference? 🤔</h5>
+            </section>
+
+            <section class="">
+                <h4>How can you get more information about the event in an event listener?</h4>
+                <div class="fragment">
+                    With the <code>event</code> object! Simply receive it as an argument in your listener:
+                    <pre><code data-trim>
+                        function onKeyPress(event) {
+                            // ...
+                        };
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="">
+                <h4 class="">How do you know which key was pressed in a <code>keypress</code> event?</h4>
+                <div class="fragment">
+                    <code>event.key</code>! For example:
+                    <pre><code data-trim>
+                        function onKeyPress(event) {
+                            if (event.key === "l") {
+                                // The L button was pressed!
+                            }
+                        };
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="">
+                <h5>How to create a new <code>&lt;p></code>-element in JS?</h5>
+                <pre class="fragment"><code data-trim>
+                    let newEl = document.createElement("p");
+                </code></pre>
+                <br>
+                <h5 class="fragment">How to set the text inside it?</h5>
+                <pre class="fragment"><code data-trim>
+                    newEl.textContent = "Hello world!";
+                </code></pre>
+                <br>
+                <h5 class="fragment">How to append it to an existing div?</h5>
+                <pre class="fragment"><code data-trim>
+                    divEl = ...;
+                    divEl.appendChild(newEl);
+                </code></pre>
+            </section>
+
+            <section class="">
+                <h5>How to add a class to an element?</h5>
+                <pre class="fragment"><code data-trim>
+                    newEl.classList.add('some-class');
+                    newEl.classList.add('some-other-class');
+                </code></pre>
+                <br>
+                <h5 class="fragment">How to remove a class?</h5>
+                <pre class="fragment"><code data-trim>
+                    newEl.classList.remove('some-other-class');
+                </code></pre>
+            </section>
+
+            <section class="">
+                <h5>How to set the id of an element?</h5>
+                <pre class="fragment"><code data-trim>
+                    newEl.id = "my-new-element";
+                </code></pre>
+            </section>
+
+            <section class="">
+                <h5>How to disable an element (e.g. button or input)?</h5>
+                <pre class="fragment"><code data-trim>
+                    newEl.setAttribue("disabled", true);
+                </code></pre>
+                <br>
+                <h5 class="fragment">How to enable it again?</h5>
+                <pre class="fragment"><code data-trim>
+                    newEl.removeAttribute("disabled");
+                </code></pre>
+            </section>
+
+            <section class="">
+                <h5>How to remove an element from the page?</h5>
+                <pre class="fragment"><code data-trim>
+                    newEl.remove();
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>Mini Project: 🦉 Twitter Clone</h3>
+                <ul>
+                    <li>
+                        We'll build it together!
+                    </li>
+                    <li>
+                        Will help you with your Todo Project
+                    </li>
+                </ul>
+            </section>
+
+            <section class="smaller">
+                <h3>Features</h3>
+                <ul>
+                    <li><strike><b>Clicking</b> the button <b>adds</b> the new tweet to the list</strike> ✔</li>
+                    <li>When <b>no tweet</b> added yet, display <b>info message</b></li>
+                    <li><strike>Input is <b>emptied</b> when tweet is added</strike> ✔</li>
+                    <li><b>Counter</b> that counts how many characters are left</li>
+                    <li>Counter turns <b>red</b> when too many characters</li>
+                    <li>Button is only <b>enabled</b> when length is between 1 and 80</li>
+                    <li>Button turns <b>red</b> when disabled</li>
+                    <li><strike>Hitting <b>enter</b> in the input is the same as clicking the button</strike> ✔</li>
+                    <li><strike><b>Delete button</b> deletes tweets</strike> ✔</li>
+                    <li>Delete button only appears when <b>hovering tweet</b></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            slideNumber: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, ]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function() {
+            $('code').click(function(event) {
+                //                console.info('Click!', $(this).text());
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>

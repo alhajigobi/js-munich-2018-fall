@@ -109,6 +109,10 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 ## [Lesson 22](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson22/)
 - Twitter clone
 
+## [Lesson 23](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson23/)
+
+## [Lesson 24](https://redi-school.github.io/js-munich-2018-fall/lessons/lesson24/)
+
 ## The Project: TODO App
 - **Add item**
 - **Remove item**
